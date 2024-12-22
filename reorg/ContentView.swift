@@ -1,6 +1,156 @@
 import SwiftUI
 
+enum ViewState: Codable {
+    case game
+    case qanda(String)
+    case youWin
+    case youLose
+    case correct(String)
+    case incorrect(String)
+    case settings
 
+    private enum CodingKeys: String, CodingKey {
+        case type
+        case value
+    }
+
+    private enum CaseType: String, Codable {
+        case game
+        case qanda
+        case youWin
+        case youLose
+        case correct
+        case incorrect
+        case settings
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let type = try container.decode(CaseType.self, forKey: .type)
+
+        switch type {
+        case .game:
+            self = .game
+        case .qanda:
+            let value = try container.decode(String.self, forKey: .value)
+            self = .qanda(value)
+        case .youWin:
+            self = .youWin
+        case .youLose:
+            self = .youLose
+        case .correct:
+            let value = try container.decode(String.self, forKey: .value)
+            self = .correct(value)
+        case .incorrect:
+            let value = try container.decode(String.self, forKey: .value)
+            self = .incorrect(value)
+        case .settings:
+            self = .settings
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+
+        switch self {
+        case .game:
+            try container.encode(CaseType.game, forKey: .type)
+        case .qanda(let value):
+            try container.encode(CaseType.qanda, forKey: .type)
+            try container.encode(value, forKey: .value)
+        case .youWin:
+            try container.encode(CaseType.youWin, forKey: .type)
+        case .youLose:
+            try container.encode(CaseType.youLose, forKey: .type)
+        case .correct(let value):
+            try container.encode(CaseType.correct, forKey: .type)
+            try container.encode(value, forKey: .value)
+        case .incorrect(let value):
+            try container.encode(CaseType.incorrect, forKey: .type)
+            try container.encode(value, forKey: .value)
+        case .settings:
+            try container.encode(CaseType.settings, forKey: .type)
+        }
+    }
+}
+
+// MARK: - GameState
+@Observable
+class GameState: Codable {
+    var currentView: ViewState = .game
+     var board: [[Int]] = []
+    var replacementCount: Int = 5 // Replacement count is now part of GameState
+
+    enum CodingKeys: String, CodingKey {
+        case board
+        case currentView
+        case replacementCount
+    }
+  // Add this:
+  init() {
+      // You can customize defaults here
+      currentView = .game
+      board = []
+      replacementCount = 5
+  }
+    // Codable conformance
+  // Codable conformance
+  required init(from decoder: Decoder) throws {
+      let container = try decoder.container(keyedBy: CodingKeys.self)
+      self.board = try container.decode([[Int]].self, forKey: .board)
+      self.currentView = try container.decode(ViewState.self, forKey: .currentView)
+      self.replacementCount = try container.decode(Int.self, forKey: .replacementCount)
+  }
+  
+    
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(board, forKey: .board)
+        try container.encode(currentView, forKey: .currentView)
+        try container.encode(replacementCount, forKey: .replacementCount)
+    }
+}
+
+// MARK: - ReplacementManager Extension on GameState
+extension GameState {
+    func decrementReplacementCount() -> Bool {
+        guard replacementCount > 0 else { return false }
+        replacementCount -= 1
+        return true
+    }
+
+    func resetReplacementCount() {
+        replacementCount = 5
+    }
+}
+// MARK: - Questions Array
+let questions = [
+    "What is the largest land animal?",
+    "What is the fastest bird?",
+    "Which animal is known as the King of the Jungle?",
+    "What color are flamingos?",
+    "What is a baby kangaroo called?",
+    "Which country produces the most wine?",
+    "What is the main ingredient of red wine?",
+    "What type of wine is Champagne?",
+    "Which wine is best served chilled?",
+    "What is a wine expert called?",
+    "Who was the drummer for The Beatles?",
+    "What year did The Beatles release 'Let It Be'?",
+    "Which Beatle was known as the quiet one?",
+    "What was The Beatles' first hit single?",
+    "In what city did The Beatles form?",
+    "What is the average lifespan of a tortoise?",
+    "What type of whale has a long horn?",
+    "What is the collective noun for a group of crows?",
+    "What do pandas eat?",
+    "What is the fastest aquatic animal?",
+    "What type of wine comes from the Bordeaux region?",
+    "Which Beatle wrote 'Hey Jude'?",
+    "What is the Beatles' best-selling album?",
+    "What type of wine is made from Sauvignon Blanc grapes?",
+    "Which bird cannot fly but is the largest in the world?"
+]
 // MARK: - LatinGunkView
 struct LatinGunkView: View {
   var body: some View {
@@ -21,21 +171,6 @@ struct LatinGunkView: View {
   }
 }
 
-// MARK: - ReplacementManager
-@Observable
-class ReplacementManager {
-  var replacementCount: Int = 5
-  
-  func decrementReplacementCount() -> Bool {
-    guard replacementCount > 0 else { return false }
-    replacementCount -= 1
-    return true
-  }
-  
-  func reset() {
-    replacementCount = 5
-  }
-}
 
 // MARK: - Main App
 @main
@@ -46,91 +181,141 @@ struct QandAApp: App {
     }
   }
 }
-// MARK: - ContentView
-struct ContentView: View {
-    @State private var currentView: ViewState = .game
-    @State private var showAlert = false
-    @State private var gameID = UUID()
-    private var replacementManager = ReplacementManager() // Replacement count initialized once
+// MARK: - AppInfoFooterView
 
-    enum ViewState {
-        case game, qanda, youWin, youLose, correct, incorrect, settings
+/// A small footer that displays the app’s name, version, and build,
+/// using data from Info.plist (CFBundleName, CFBundleShortVersionString, CFBundleVersion).
+struct AppInfoFooterView: View {
+    // Grab values from Info.plist
+    private let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String ?? "Unknown App"
+    private let appVersion = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "0.0"
+    private let appBuild = Bundle.main.object(forInfoDictionaryKey: "CFBundleVersion") as? String ?? "0"
+
+    var body: some View {
+        Text("\(appName) v\(appVersion) (Build \(appBuild))")
+            .font(.footnote)
+            .foregroundColor(.primary)
+            .padding(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.blue, lineWidth: 1)
+            )
+            .padding(.bottom, 12)
     }
+}
+// MARK: - TitleBarModifier
+struct TitleBarWithDismiss: ViewModifier {
+    var title: String
+    var onDismiss: () -> Void
+
+    func body(content: Content) -> some View {
+        VStack(spacing: 20) {
+            // Top Bar
+            HStack {
+                Spacer()
+                Text(title)
+                    .font(.title)
+                    .bold()
+                Spacer()
+              Button(action: onDismiss) {
+                  Image(systemName: "xmark")
+                      .font(.title)
+                      .foregroundColor(.primary)
+              }
+              .padding(.trailing)
+            }
+            .padding(.top, 20)
+            .padding(.bottom, 10)
+
+            Divider()
+
+            // Main Content
+            content
+        }
+    }
+}
+
+extension View {
+    func withTitleBar(title: String, onDismiss: @escaping () -> Void) -> some View {
+        self.modifier(TitleBarWithDismiss(title: title, onDismiss: onDismiss))
+    }
+}
+struct ContentView: View {
+    @State private var gameState = GameState()
+    @State private var showAlert = false
 
     var body: some View {
         ZStack {
-            switch currentView {
+            switch gameState.currentView {
             case .game:
                 MainGameView(
-                    replacementManager: replacementManager, // Pass manager explicitly
-                    onQandA: { withAnimation { currentView = .qanda } },
+                  gameState: gameState, // Pass replacement count
+                    onQandA: { question in
+                        withAnimation {
+                            gameState.currentView = .qanda(question)
+                        }
+                    },
                     onSettings: { showAlert = true }
                 )
-
-            case .qanda:
+            case .qanda(let question):
                 QandAView(
-                    replacementManager: replacementManager, // Pass manager explicitly
-                    onYouWin: { withAnimation { currentView = .youWin } },
-                    onYouLose: { withAnimation { currentView = .youLose } },
-                    onCorrect: { withAnimation { currentView = .correct } },
-                    onIncorrect: { withAnimation { currentView = .incorrect } },
-                    onBack: { withAnimation { currentView = .game } }
+                    question: question,
+                    gameState: gameState, // Use GameState for replacement count
+                    onYouWin: { withAnimation { gameState.currentView = .youWin } },
+                    onYouLose: { withAnimation { gameState.currentView = .youLose } },
+                    onCorrect: { withAnimation { gameState.currentView = .correct(question) } },
+                    onIncorrect: { withAnimation { gameState.currentView = .incorrect(question) } },
+                    onBack: { withAnimation { gameState.currentView = .game } }
                 )
-
             case .youWin:
                 YouWinView(
                     onNewGame: { resetGame() },
-                    onSettings: { withAnimation { currentView = .settings } }
+                    onSettings: { withAnimation { gameState.currentView = .settings } }
                 )
-
             case .youLose:
                 YouLoseView(
                     onNewGame: { resetGame() },
-                    onSettings: { withAnimation { currentView = .settings } }
+                    onSettings: { withAnimation { gameState.currentView = .settings } }
                 )
-
-            case .correct:
+            case .correct(let question):
                 CorrectlyAnsweredView(
-                    text: "You answered this question correctly!",
-                    onBackToQandA: { withAnimation { currentView = .qanda } }
+                    question: question,
+                    onBackToQandA: { withAnimation { gameState.currentView = .qanda(question) } }
                 )
-
-            case .incorrect:
+            case .incorrect(let question):
                 IncorrectlyAnsweredView(
-                    text: "You answered this question incorrectly!",
-                    onBackToQandA: { withAnimation { currentView = .qanda } }
+                    question: question,
+                    onBackToQandA: { withAnimation { gameState.currentView = .qanda(question) } }
                 )
-
             case .settings:
                 SettingsView(
-                    replacementManager: replacementManager, // Pass manager explicitly
+                    gameState: gameState,
                     onNewRound: { resetGame() }
+                    //onIncrementReplacementCount: { gameState.replacementCount += 5 }
                 )
             }
         }
         .alert("End Current Game?", isPresented: $showAlert) {
             Button("Cancel", role: .cancel) { }
-            Button("End Game") {
-                withAnimation { currentView = .settings }
-            }
+            Button("End Game") { withAnimation { gameState.currentView = ViewState.settings } }
         } message: {
             Text("Entering settings will end the current game.")
         }
     }
 
     private func resetGame() {
-        gameID = UUID()
-        withAnimation { currentView = .game }
-        // Note: Replacement count is not reset here
+        gameState.currentView = ViewState.game
+        gameState.board = Array(repeating: Array(repeating: 0, count: 5), count: 5) // Reset board
+        gameState.resetReplacementCount() // Reset replacements
     }
 }
 // MARK: - MainGameView
 struct MainGameView: View {
-    var replacementManager: ReplacementManager
-    var onQandA: () -> Void
+    var gameState: GameState
+    var onQandA: (String) -> Void // Pass the selected question
     var onSettings: () -> Void
 
-    @State private var gridColors: [[Color]] = []
+    private let gridColors: [Color] = [.red, .yellow, .blue] // Define the three colors
 
     var body: some View {
         VStack(spacing: 20) {
@@ -149,65 +334,65 @@ struct MainGameView: View {
             }
             .padding(.top)
 
-            Text("Replacements Left: \(replacementManager.replacementCount)")
+          Text("Replacements Left: \(gameState.replacementCount)")
                 .font(.subheadline)
                 .padding(.bottom)
 
-            Button(action: onQandA) {
-                VStack {
-                    if gridColors.count == 4 && gridColors.allSatisfy({ $0.count == 4 }) {
-                        ForEach(0..<4, id: \.self) { row in
-                            HStack {
-                                ForEach(0..<4, id: \.self) { col in
-                                    Circle()
-                                        .fill(gridColors[row][col])
-                                        .frame(width: 40, height: 40)
-                                }
+            // Grid of Touchpoints with Three Colors
+            VStack(spacing: 10) {
+                ForEach(0..<5, id: \.self) { row in
+                    HStack(spacing: 10) {
+                        ForEach(0..<5, id: \.self) { col in
+                            let questionIndex = row * 5 + col
+                            Button(action: {
+                                onQandA(questions[questionIndex])
+                            }) {
+                                Circle()
+                                    .fill(randomGridColor())
+                                    .frame(width: 50, height: 50)
                             }
                         }
-                    } else {
-                        Text("Loading Grid...")
-                            .font(.headline)
                     }
                 }
             }
-            .buttonStyle(.plain)
-            .padding()
 
             Spacer()
         }
-        .onAppear {
-            resetGridColors()
-        }
+        .padding()
     }
 
-    private func resetGridColors() {
-        gridColors = (0..<4).map { _ in
-            (0..<4).map { _ in randomColor() }
-        }
-    }
-
-    private func randomColor() -> Color {
-        let colors: [Color] = [.red, .blue, .green, .yellow, .purple, .orange, .pink]
-        return colors.randomElement() ?? .gray
+    private func randomGridColor() -> Color {
+        gridColors.randomElement() ?? .gray // Randomly pick one of the defined colors
     }
 }
 // MARK: - QandAView
 struct QandAView: View {
     @State private var showAlert = false
-    @State private var question = "Here is the question to answer. (\(Date().formatted(date: .omitted, time: .standard)))"
+    @State private var currentQuestion: String
+    @State private var questionTimestamp: String
     @State private var showThumbsUp = false
     @State private var showThumbsDown = false
     @State private var showHint = false
     @State private var isAnimatingReplacement = false
     @State private var answerCounter = 1 // Tracks the current label number for answers
 
-    var replacementManager: ReplacementManager
+    var gameState: GameState
     var onYouWin: () -> Void
     var onYouLose: () -> Void
     var onCorrect: () -> Void
     var onIncorrect: () -> Void
     var onBack: () -> Void
+
+    init(question: String, gameState: GameState, onYouWin: @escaping () -> Void, onYouLose: @escaping () -> Void, onCorrect: @escaping () -> Void, onIncorrect: @escaping () -> Void, onBack: @escaping () -> Void) {
+        self._currentQuestion = State(initialValue: question)
+        self._questionTimestamp = State(initialValue: Date().formatted(date: .omitted, time: .standard))
+        self.gameState = gameState
+        self.onYouWin = onYouWin
+        self.onYouLose = onYouLose
+        self.onCorrect = onCorrect
+        self.onIncorrect = onIncorrect
+        self.onBack = onBack
+    }
 
     var body: some View {
         VStack(spacing: 20) {
@@ -231,11 +416,11 @@ struct QandAView: View {
             .padding(.top)
 
             // Replacement Count
-            Text("Replacements Left: \(replacementManager.replacementCount)")
+            Text("Replacements Left: \(gameState.replacementCount)")
                 .font(.subheadline)
 
-            // Question
-            Text(question)
+            // Current Question
+            Text("\(currentQuestion) (\(questionTimestamp))")
                 .multilineTextAlignment(.center)
                 .padding()
                 .background(Color.gray.opacity(0.1))
@@ -246,12 +431,12 @@ struct QandAView: View {
 
             // Replace Button
             Button("Replace") {
-                if !replacementManager.decrementReplacementCount() {
+                if !gameState.decrementReplacementCount() {
                     showAlert = true
                 } else {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         isAnimatingReplacement = true // Start the animation
-                        question = "Here is a new question. (\(Date().formatted(date: .omitted, time: .standard)))"
+                        questionTimestamp = Date().formatted(date: .omitted, time: .standard)
                         answerCounter += 1 // Increment the counter for new labels
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -293,36 +478,36 @@ struct QandAView: View {
             }
 
             Spacer()
-          // Answer Buttons with Monotonically Increasing Labels and New Prefixes
-          VStack(spacing: 10) {
-              Button("Correct \(answerCounter)-1") {
-                  onCorrect()
-              }
-              .buttonStyle(.borderedProminent)
 
-              Button("Wrong \(answerCounter)-2") {
-                  onIncorrect()
-              }
-              .buttonStyle(.borderedProminent)
+            // Answer Buttons
+            VStack(spacing: 10) {
+                Button("Correct \(answerCounter)-1") {
+                    onCorrect()
+                }
+                .buttonStyle(.borderedProminent)
 
-              Button("YouWin \(answerCounter)-3") {
-                  onYouWin()
-              }
-              .buttonStyle(.borderedProminent)
+                Button("Wrong \(answerCounter)-2") {
+                    onIncorrect()
+                }
+                .buttonStyle(.borderedProminent)
 
-              Button("YouLose \(answerCounter)-4") {
-                  onYouLose()
-              }
-              .buttonStyle(.borderedProminent)
-          }
+                Button("YouWin \(answerCounter)-3") {
+                    onYouWin()
+                }
+                .buttonStyle(.borderedProminent)
+
+                Button("YouLose \(answerCounter)-4") {
+                    onYouLose()
+                }
+                .buttonStyle(.borderedProminent)
+            }
         }
         .padding()
     }
 }
-
 // MARK: - SettingsView
 struct SettingsView: View {
-  var replacementManager: ReplacementManager
+  var gameState: GameState
   var onNewRound: () -> Void
   @State var showComingFromKwanduh = false
   var body: some View {
@@ -332,7 +517,7 @@ struct SettingsView: View {
         .bold()
         .padding(.top)
       
-      Text("Replacements Left: \(replacementManager.replacementCount)")
+      Text("Replacements Left: \(gameState.replacementCount)")
         .font(.subheadline)
       
       Button("Size") {showComingFromKwanduh = true}
@@ -344,7 +529,7 @@ struct SettingsView: View {
       Button("Colors") { showComingFromKwanduh = true}
         .buttonStyle(.borderedProminent)
       
-      Button("Freeport") { replacementManager.replacementCount += 5}
+      Button("Freeport") { gameState.replacementCount += 5}
         .buttonStyle(.borderedProminent)
       
       Button(action: onNewRound) {
@@ -357,6 +542,10 @@ struct SettingsView: View {
           .cornerRadius(10)
           .padding()
       }
+      
+      
+      // ---- Here’s your new footer at the bottom ----
+      AppInfoFooterView()
     } .sheet(isPresented: $showComingFromKwanduh){
       ComingFromKwanduhView() {
         showComingFromKwanduh = false
@@ -510,25 +699,7 @@ struct ThumbsUpView: View {
   
   var body: some View {
     VStack(spacing: 20) {
-      HStack {
-        Button(action: onBackToQandA) {
-          Image(systemName: "arrow.left")
-            .font(.title)
-            .foregroundColor(.primary)
-        }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("Thumbs Up")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
-      
+
       Divider()
       
       Text("You gave this a thumbs up!")
@@ -537,245 +708,128 @@ struct ThumbsUpView: View {
       Spacer()
       LatinGunkView()
     }
+    .withTitleBar(title: "Thumbs Up", onDismiss: onBackToQandA)
+    .background(Color(.systemBackground))
   }
 }
 
 // MARK: - ThumbsDownView
 struct ThumbsDownView: View {
   var onBackToQandA: () -> Void
-  
   var body: some View {
     VStack(spacing: 20) {
-      HStack {
-        Button(action: onBackToQandA) {
-          Image(systemName: "arrow.left")
-            .font(.title)
-            .foregroundColor(.primary)
-        }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("Thumbs Down")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
       
-      Divider()
-      
-      Text("You gave this a thumbs down!")
+      Text("I'm giving this a thumbs down")
         .padding()
       
       Spacer()
       LatinGunkView()
     }
+    .withTitleBar(title: "Thubs Down", onDismiss:onBackToQandA)
+    .background(Color(.systemBackground))
   }
 }
 
 // MARK: - HintView
 struct HintView: View {
   var onBackToQandA: () -> Void
-  
   var body: some View {
     VStack(spacing: 20) {
-      HStack {
-        Button(action: onBackToQandA) {
-          Image(systemName: "arrow.left")
-            .font(.title)
-            .foregroundColor(.primary)
-        }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("Hint")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
-      
-      Divider()
-      
       Text("Here's a helpful hint!")
         .padding()
-      
-      Spacer()
     }
+    .withTitleBar(title: "Hint", onDismiss: onBackToQandA)
   }
 }
 // MARK: - CorrectlyAnsweredView
 struct CorrectlyAnsweredView: View {
-  var text: String
-  var onBackToQandA: () -> Void
-  
+    var question: String
+    var onBackToQandA: () -> Void
   var body: some View {
-    VStack(spacing: 0) {
-      // Top Bar with Back Button
-      HStack {
-        Button(action: onBackToQandA) {
-          Image(systemName: "arrow.left")
-            .font(.title)
-            .foregroundColor(.primary)
+        VStack(spacing: 0) {
+            // Display the Question
+            Text("You answered correctly: \(question)")
+                .padding()
+                .multilineTextAlignment(.center)
+
+            Spacer()
         }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("Correct Answer")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
-      
-      Divider()
-      
-      // Scrollable Text
-      ScrollView {
-        Text(text)
-          .padding()
-      }
+        .withTitleBar(title: "Answered Correctly", onDismiss: onBackToQandA)
+        .background(Color(.systemBackground))
     }
-    .background(Color(.systemBackground))
-  }
+}
+#Preview {
+  CorrectlyAnsweredView(question: "test question", onBackToQandA: {})
 }
 // MARK: - IncorrectlyAnsweredView
 struct IncorrectlyAnsweredView: View {
-  var text: String
-  var onBackToQandA: () -> Void
-  
-  var body: some View {
-    VStack(spacing: 0) {
-      // Top Bar with Back Button
-      HStack {
-        Button(action: onBackToQandA) {
-          Image(systemName: "arrow.left")
-            .font(.title)
-            .foregroundColor(.primary)
-        }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("Incorrect Answer")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
-      
-      Divider()
-      
-      // Scrollable Text
-      ScrollView {
-        Text(text)
-          .padding()
-      }
-    }
-    .background(Color(.systemBackground))
-  }
-}
+    var question: String
+    var onBackToQandA: () -> Void
+    var body: some View {
+        VStack(spacing: 0) {
 
+
+            // Display the Question
+            Text("You answered incorrectly: \(question)")
+                .padding()
+                .multilineTextAlignment(.center)
+
+            Spacer()
+        }
+        .withTitleBar(title: "Answered Incorrectly", onDismiss: onBackToQandA)
+        .background(Color(.systemBackground))
+    
+    }
+}
+#Preview {
+  IncorrectlyAnsweredView(question: "test question", onBackToQandA: {})
+}
 // MARK: - FreePortView
 struct FreePortView: View {
-  @Environment(ReplacementManager.self) private var replacementManager
-  var onDismiss: () -> Void
-  
-  var body: some View {
-    VStack(spacing: 20) {
-      // Top Bar with Dismiss Button
-      HStack {
-        Button(action: onDismiss) {
-          Image(systemName: "xmark")
-            .font(.title)
-            .foregroundColor(.primary)
+  var gameState: GameState
+    var onDismiss: () -> Void
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Spacer()
+
+            // Add 5 to Replacement Counter Button
+            Button(action: {
+                gameState.replacementCount += 5
+            }) {
+                Text("Add 5 Replacements")
+                    .font(.title2)
+                    .bold()
+                    .frame(maxWidth: .infinity, minHeight: 60)
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(10)
+                    .padding(.horizontal)
+            }
+
+            Spacer()
         }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("FreePort")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
-      
-      Divider()
-      
-      Spacer()
-      
-      // Add 5 to Replacement Counter Button
-      Button(action: {
-        replacementManager.replacementCount += 5
-      }) {
-        Text("Add 5 Replacements")
-          .font(.title2)
-          .bold()
-          .frame(maxWidth: .infinity, minHeight: 60)
-          .foregroundColor(.white)
-          .background(Color.green)
-          .cornerRadius(10)
-          .padding(.horizontal)
-      }
-      
-      Spacer()
+        .withTitleBar(title: "FreePort", onDismiss: onDismiss)
+        .background(Color(.systemBackground))
     }
-    .padding()
-    .background(Color(.systemBackground))
-  }
 }
 // MARK: - ComingFromKwanduhView
 struct ComingFromKwanduhView: View {
-  var onDismiss: () -> Void
-  
-  var body: some View {
-    VStack(spacing: 20) {
-      // Top Bar with Dismiss Button
-      HStack {
-        Button(action: onDismiss) {
-          Image(systemName: "xmark")
-            .font(.title)
-            .foregroundColor(.primary)
+    var onDismiss: () -> Void
+
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("It will be the exact same for now.")
+                .font(.body)
+                .multilineTextAlignment(.center)
+                .padding()
+            
+            Spacer()
         }
-        .padding(.leading)
-        
-        Spacer()
-        
-        Text("Coming from Kwanduh")
-          .font(.title)
-          .bold()
-        
-        Spacer()
-      }
-      .padding(.top, 20)
-      .padding(.bottom, 10)
-      
-      Divider()
-      
-      Spacer()
-      
-      Text("It will be the exact same for now.")
-        .font(.body)
-        .multilineTextAlignment(.center)
-        .padding()
-      
-      Spacer()
+        .withTitleBar(title: "Coming from Kwanduh", onDismiss: onDismiss)
+        .background(Color(.systemBackground))
     }
-    .padding()
-    .background(Color(.systemBackground))
-  }
+}
+#Preview {
+  ComingFromKwanduhView(){}
 }

@@ -198,22 +198,21 @@ struct HintView: View {
 // MARK: - CorrectlyAnsweredView
 struct CorrectlyAnsweredView: View {
     var question: String
-    var onBackToQandA: () -> Void
+    var onBackToGame: () -> Void
   var body: some View {
         VStack(spacing: 0) {
             // Display the Question
             Text("You answered correctly: \(question)")
                 .padding()
                 .multilineTextAlignment(.center)
-
             Spacer()
         }
-        .withTitleBar(title: "Answered Correctly", onDismiss: onBackToQandA)
+        .withTitleBar(title: "Answered Correctly", onDismiss: onBackToGame)
         .background(Color(.systemBackground))
     }
 }
 #Preview {
-  CorrectlyAnsweredView(question: "test question", onBackToQandA: {})
+  CorrectlyAnsweredView(question: "test question", onBackToGame: {})
 }
 // MARK: - IncorrectlyAnsweredView
 struct IncorrectlyAnsweredView: View {

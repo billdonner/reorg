@@ -76,8 +76,9 @@ let shouldAssert:Bool = true
 let isDebugModeEnabled:Bool = true
 let cloudKit:Bool = true
 let cloudKitBypass = true
-let debugBorderColor = Color.red
-let colors_per_scheme = 5
+let debugBorderColor = Color.red 
+
+let playDataURL  = Bundle.main.url(forResource: "playdata.json", withExtension: nil)
 
 @main
 struct QandAApp: App {
@@ -148,12 +149,12 @@ struct ContentView: View {
             case .correct(let question):
                 CorrectlyAnsweredView(
                     question: question,
-                    onBackToQandA: { withAnimation { gameState.currentView = .qanda(question) } }
+                    onBackToGame: { withAnimation { gameState.currentView = .game } }
                 )
             case .incorrect(let question):
                 IncorrectlyAnsweredView(
                     question: question,
-                    onBackToQandA: { withAnimation { gameState.currentView = .qanda(question) } }
+                    onBackToQandA: { withAnimation { gameState.currentView = .game } }
                 )
             case .settings:
                 SettingsView(

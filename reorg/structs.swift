@@ -599,3 +599,11 @@ enum AppVersionProvider {
         return x + "." + y
     }
 }
+struct MatrixConfiguration {
+    let maxBlockedPercentage: Int        // Max percentage of blocked cells in the matrix
+    let minBlockedPercentage: Int        // Min percentage of blocked cells in the matrix
+    let maxBlockedPerRowCol: Int         // Max percentage of blocked cells per row/col
+    let maxBlockedPerDiagonal: Int       // Max percentage of blocked cells per diagonal
+    let cornersRequireAdjacentUnplayed: Int // Minimum number of adjacent `unplayed` cells for corners
+    let maxAdjacentBlockedPercentage: Int   // Max percentage of adjacent blocked cells (for larger boards)
+}

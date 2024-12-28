@@ -327,11 +327,6 @@ extension  ChaMan {
     return URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true).appendingPathComponent("challengeStatuses.json")
   }
 }
-extension AnsweredInfo {
-  static func getAnsweredInfoFilePath() -> URL {
-    return URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0], isDirectory: true).appendingPathComponent("answeredInfo.json")
-  }
-}
 
 extension String {
     /// Pads or truncates the string to the specified length.
@@ -552,18 +547,3 @@ func getRandomTopics(_ count: Int, from topics: [String]) -> [String] {
   return t
 }
 
-extension TopicInfo {
-  static func getTopicInfoFilePath() -> URL {
-      let fileManager = FileManager.default
-      let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
-      return urls[0].appendingPathComponent("topicinfo.json")
-  }
-}
-extension GameState {
-  // Get the file path for storing challenge statuses
-  static func getGameStateFilePath() -> URL {
-    let fileManager = FileManager.default
-    let urls = fileManager.urls(for: .documentDirectory, in: .userDomainMask)
-    return urls[0].appendingPathComponent("gameBoard.json")
-  }
-}

@@ -37,24 +37,6 @@ struct QandAView: View {
 
     var body: some View {
         VStack(spacing: 20) {
-            // Top Bar
-            HStack {
-                Button(action: onBack) {
-                    Image(systemName: "arrow.left")
-                        .font(.title)
-                        .foregroundColor(.primary)
-                }
-                .padding(.leading)
-
-                Spacer()
-
-                Text("Q&A Session")
-                    .font(.title)
-                    .bold()
-
-                Spacer()
-            }
-            .padding(.top)
 
             // Replacement Count
           Text("Replacements Left: \(gameState.gimmees)")
@@ -143,6 +125,11 @@ struct QandAView: View {
                 .buttonStyle(.borderedProminent)
             }
         }
+       
+           .padding(.top)
+           .withTitleBar(title: "Q&A Session", onDismiss: onBack)
+           .background(Color(.systemBackground))
+
         .padding()
     }
 }

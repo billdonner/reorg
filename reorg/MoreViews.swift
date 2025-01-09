@@ -319,6 +319,35 @@ struct HintView: View {
 #Preview("Hint") {
   HintView(ch: Challenge.amock  ){}
 }
+// MARK: - HintView
+struct ReplacementPageView : View {
+
+  let ch: Challenge
+  var onBackToQandAPlus: (Challenge?) -> Void
+  var body: some View {
+    NavigationView {
+      VStack {
+        Text(         "I will replace this Question \nwith another from the same topic, \nif possible").font(.title)
+          .padding()
+        Text("I will charge you one gimmee")
+      }
+   
+    .navigationTitle(Text("Replacement"))
+    .navigationBarItems(
+      leading: Button("Cancel") {
+        onBackToQandAPlus(nil)
+      },
+      trailing: Button("Done") {
+        onBackToQandAPlus(Challenge.bmock)
+     
+      })
+    .background(Color(.systemBackground))
+  }
+  }
+}
+#Preview("ReplacementPageView") {
+  ReplacementPageView(ch: Challenge.amock  ){ch in }
+}
 // MARK: - CorrectlyAnsweredView
 struct CorrectlyAnsweredView: View {
   var challenge:Challenge

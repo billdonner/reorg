@@ -9,6 +9,7 @@ import SwiftUI
 // MARK: - SettingsView
 struct SettingsView: View {
   @Binding var gameState: GameState
+ let chmgr: ChaMan
   var onNewRound: () -> Void
   @State var showComingFromKwanduh = false
   @State var showSizeScreen = false
@@ -27,7 +28,7 @@ struct SettingsView: View {
       Button("Size") {showSizeScreen = true}
         .buttonStyle(.borderedProminent)
       
-      Button("Topics") { showComingFromKwanduh = true}
+      Button("Topics") { showTopicsScreen = true}
         .buttonStyle(.borderedProminent)
       //ColorSchemePickerView
       Button("Colors") { showColorScreen = true}
@@ -60,6 +61,15 @@ struct SettingsView: View {
     }
     .sheet(isPresented: $showColorScreen) {
       ColorSchemePickerView(gs: $gameState)
+    }
+    .sheet(isPresented: $showTopicsScreen){/**
+                                            struct TopicSelectorScreen: View {
+                                              let gs:GameState
+                                              let chmgr:ChaMan
+                                              @Binding var  gimmeCount: Int // Gimme count passed as a binding
+                                              @Binding var  isTouching: Bool
+                                            */
+      TopicSelectorScreen(gs: gameState,chmgr:gameState.chmgr!,gimmeCount: $gameState.gimmees,isTouching: .constant(false))
     }
   }
 }

@@ -17,7 +17,6 @@ struct MainGameView: View {
     var body: some View {
         VStack(spacing: 20) {
             HStack {
-                Spacer()
                 Text("Live Game Running")
                     .font(.largeTitle)
                     .bold()

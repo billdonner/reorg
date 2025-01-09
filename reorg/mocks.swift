@@ -55,6 +55,7 @@ extension GameState {
   } ()
   static var mock = {
     let x = GameState(chmgr: ChaMan.mock, size:3,topics:mockTopics,  challenges:Challenge.mockChallenges)
+    x.board[0][0] = 0
     x.movenumber = 1
     x.moveindex[0][0] = 1
     x.replaced[0][0] = [2]
@@ -62,6 +63,7 @@ extension GameState {
     x.lastmove = .init(row: 0, col: 0,movenumber:1)
     return x
   } ()
+  
 }
 
 extension Challenge {

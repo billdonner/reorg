@@ -1,7 +1,7 @@
 import SwiftUI
 
 
-
+let plainTopicIndex = true
 // MARK: - ReplacementManager Extension on GameState
 extension GameState {
     func decrementReplacementCount() -> Bool {
@@ -14,11 +14,6 @@ extension GameState {
         gimmees = 5
     }
 }
-
-
-
-
-
 
 
 // MARK: - Questions Array
@@ -112,6 +107,7 @@ struct ContentView: View {
                              topics:[:],
                              challenges:Challenge.mockChallenges)
     @State  var showAlert = false
+  @State var qarb:QARBOp? = nil
 
     var body: some View {
         ZStack {
@@ -127,15 +123,16 @@ struct ContentView: View {
                     onSettings: { showAlert = true }
                 )
             case .qanda(let challenge):
-                QandAView(
-                  challenge: challenge,
-                    gameState: gameState, // Use GameState for replacement count
-                    onYouWin: { withAnimation { gameState.currentView = .youWin } },
-                    onYouLose: { withAnimation { gameState.currentView = .youLose } },
-                    onCorrect: { withAnimation { gameState.currentView = .correct(challenge) } },
-                    onIncorrect: { withAnimation { gameState.currentView = .incorrect(challenge) } },
-                    onBack: { withAnimation { gameState.currentView = .game } }
-                )
+            if let chmgr = gameState.chmgr {
+              QandAScreen(gs:$gameState,chmgr: chmgr, ch: challenge, row:0,col:0,
+                          qarb:$qarb,
+                          onYouWin: { withAnimation { gameState.currentView = .youWin } },
+                          onYouLose: { withAnimation { gameState.currentView = .youLose } },
+                          onCorrect: { withAnimation { gameState.currentView = .correct(challenge) } },
+                          onIncorrect: { withAnimation { gameState.currentView = .incorrect(challenge) } },
+                          onBack: { withAnimation { gameState.currentView = .game } }
+              )
+            }
             case .youWin:
                 YouWinView(
                     onNewGame: { resetGame() },
@@ -157,11 +154,13 @@ struct ContentView: View {
                     onBackToQandA: { withAnimation { gameState.currentView = .game } }
                 )
             case .settings:
-                SettingsView(
-                  gameState: $gameState,
-                    onNewRound: { resetGame() }
-                    //onIncrementReplacementCount: { gameState.replacementCount += 5 }
-                )
+            if let chmgr = gameState.chmgr {
+              SettingsView(
+                gameState: $gameState,chmgr:chmgr,
+                onNewRound: { resetGame() }
+                //onIncrementReplacementCount: { gameState.replacementCount += 5 }
+              )
+            }
             case .none:
               let _ = print ("ENDEND");EmptyView()
             }
@@ -171,6 +170,13 @@ struct ContentView: View {
             Button("End Game") { withAnimation { gameState.currentView = ViewState.settings } }
         } message: {
             Text("Entering settings will end the current game.")
+        }
+        .onChange(of:qarb){ old,new  in
+          if let qarb = new {
+            print("--Qarb is now \(qarb.description())")
+          } else {
+            print("--Qarb is nil")
+          }
         }
     }
 

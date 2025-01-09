@@ -22,6 +22,8 @@ struct QandAView: View {
     var onCorrect: () -> Void
     var onIncorrect: () -> Void
     var onBack: () -> Void
+  
+  
 
     init(challenge: Challenge, gameState: GameState, onYouWin: @escaping () -> Void, onYouLose: @escaping () -> Void, onCorrect: @escaping () -> Void, onIncorrect: @escaping () -> Void, onBack: @escaping () -> Void) {
         self._currentChallenge = State(initialValue: challenge)

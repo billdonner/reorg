@@ -9,7 +9,7 @@ import SwiftUI
 // MARK: - MainGameView
 struct MainGameView: View {
     var gameState: GameState
-    var onQandA: (String) -> Void // Pass the selected question
+    var onQandA: (Challenge) -> Void // Pass the selected question
     var onSettings: () -> Void
 
     private let gridColors: [Color] = [.red, .yellow, .blue] // Define the three colors
@@ -40,9 +40,9 @@ struct MainGameView: View {
                 ForEach(0..<5, id: \.self) { row in
                     HStack(spacing: 10) {
                         ForEach(0..<5, id: \.self) { col in
-                            let questionIndex = row * 5 + col
+                            //let questionIndex = row * 5 + col
                             Button(action: {
-                                onQandA(questions[questionIndex])
+                              onQandA(Challenge.amock )
                             }) {
                                 Circle()
                                     .fill(randomGridColor())

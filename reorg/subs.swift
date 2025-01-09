@@ -412,7 +412,8 @@ enum AppIconProvider {
               let iconFiles = primaryIcon["CFBundleIconFiles"] as? [String],
            //   # 4
               let iconFileName = iconFiles.last else {
-            fatalError("Could not find icons in bundle")
+            print("Could not find icons in bundle")
+          return ""
         }
         return iconFileName
     }

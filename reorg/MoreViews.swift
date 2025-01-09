@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+ 
 
 // MARK: - YouLoseView
 struct YouLoseView: View {
@@ -149,60 +150,189 @@ struct YouWinView: View {
 }
 // MARK: - ThumbsUpView
 struct ThumbsUpView: View {
+  let ch:Challenge
   var onBackToQandA: () -> Void
+
+  @State private var cloudKitManager = CloudKitManager.shared
+  @State private var message: String = ""
+  @State private var selectedFeeling: String = "Insightful"
+  @State private var showAlert = false
+  
+  let positiveFeelings = ["Good Explanation", "Good Hint",   "Stimulating", "Insightful", "Brilliant","Fun Fact","Interesting Fact","Other"]
+  @Environment(\.dismiss) var dismiss  // Environment value for dismissing the view
   
   var body: some View {
-    VStack(spacing: 20) {
-
-      Divider()
-      
-      Text("You gave this a thumbs up!")
+    NavigationView {
+      VStack {
+        TextField("Enter thumbs up message", text: $message)
+          .textFieldStyle(RoundedBorderTextFieldStyle())
+          .padding()
+        
+        Picker("Select a feeling", selection: $selectedFeeling) {
+          ForEach(positiveFeelings, id: \.self) { feeling in
+            Text(feeling)
+          }
+        }
+        .pickerStyle(MenuPickerStyle())
         .padding()
-      
-      Spacer()
-      LatinGunkView()
+        
+        Button(action: {
+          if !cloudKitBypass {
+            
+            let timestamp = Date()
+            cloudKitManager.saveLogRecord(
+              message: message,
+              sentiment: "Thumbs Up",
+              predefinedFeeling: selectedFeeling,
+              timestamp: timestamp,
+              challengeIdentifier: ch.id
+            ) { result in
+              switch result {
+              case .success(let record):
+                print("Successfully saved positive sentiment record: \(record)")
+                dismiss()
+              case .failure(let error):
+                print("Error saving positive sentiment record: \(error)")
+                showAlert = true
+              }
+            }
+          }
+          else {
+            dismiss() // dont send to cloudkit
+          }
+        }) {
+          Text("Submit Thumbs Up")
+            .padding()
+            .background(Color.green)
+            .foregroundColor(.white)
+            .cornerRadius(8)
+        }
+        .alert(isPresented: $showAlert) {
+          Alert(title: Text("Error"), message: Text(cloudKitManager.errorMessage ?? "Unknown error"), dismissButton: .default(Text("OK")))
+        }
+      }
+      .padding()
+
     }
     .withTitleBar(title: "Thumbs Up", onDismiss: onBackToQandA)
     .background(Color(.systemBackground))
   }
 }
-
+#Preview("Positive") {
+  ThumbsUpView(ch:Challenge.amock ){}
+}
 // MARK: - ThumbsDownView
 struct ThumbsDownView: View {
+  let ch:Challenge
   var onBackToQandA: () -> Void
-  var body: some View {
-    VStack(spacing: 20) {
-      
-      Text("I'm giving this a thumbs down")
+
+    let negativeFeelings = ["Incorrect", "Crazy", "Illogical", "Confusing", "Bad Explanation","Bad Hint","Boring", "I Hate It","Other"]
+    @State private var cloudKitManager = CloudKitManager.shared
+    @State private var message: String = ""
+    @State private var selectedFeeling: String = "Incorrect"
+    @State private var showAlert = false
+    @Environment(\.dismiss) var dismiss  // Environment value for dismissing the view
+    
+    var body: some View {
+      NavigationView {
+        VStack {
+          TextField("Enter thumbsdown message", text: $message)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding()
+          
+          Picker("Select a feeling", selection: $selectedFeeling) {
+            ForEach(negativeFeelings, id: \.self) { feeling in
+              Text(feeling)
+            }
+          }
+          .pickerStyle(MenuPickerStyle())
+          .padding()
+          
+          Button(action: {
+            if !cloudKitBypass {
+              
+              let timestamp = Date()
+              cloudKitManager.saveLogRecord(
+                message: message,
+                sentiment: "Thumbs Down",
+                predefinedFeeling: selectedFeeling,
+                timestamp: timestamp,
+                challengeIdentifier:   ch.id
+              ) { result in
+                switch result {
+                case .success(let record):
+                  print("Successfully saved negative sentiment record: \(record)")
+                  dismiss()
+                case .failure(let error):
+                  print("Error saving negative sentiment record: \(error)")
+                  showAlert = true
+                }
+              }
+            }
+          }) {
+            Text("Submit Thumbs Down")
+              .padding()
+              .background(Color.red)
+              .foregroundColor(.white)
+              .cornerRadius(8)
+          }
+          .alert(isPresented: $showAlert) {
+            Alert(title: Text("Error"), message: Text(cloudKitManager.errorMessage ?? "Unknown error"), dismissButton: .default(Text("OK")))
+          }
+        }
         .padding()
-      
-      Spacer()
-      LatinGunkView()
-    }
-    .withTitleBar(title: "Thubs Down", onDismiss:onBackToQandA)
+       // .navigationTitle("Send Thumbs Down")
+//        .toolbar {
+//          ToolbarItem(placement: .navigationBarTrailing) {
+//            Button(action: {
+//              dismiss()
+//            }) {
+//              Image(systemName: "xmark")
+//                .foregroundColor(.primary)  // Adjust the color as needed
+//            }
+//          }
+//        }
+      }
+    .withTitleBar(title: "Thumbs Down", onDismiss:onBackToQandA)
     .background(Color(.systemBackground))
   }
 }
-
+#Preview("Negative") {
+  ThumbsDownView(ch: Challenge.amock  ){}
+}
 // MARK: - HintView
 struct HintView: View {
+
+  let ch: Challenge
   var onBackToQandA: () -> Void
   var body: some View {
-    VStack(spacing: 20) {
-      Text("Here's a helpful hint!")
-        .padding()
-    }
+    NavigationView {
+      VStack {
+        Text(ch.hint )
+          .padding()
+      }
+    } 
     .withTitleBar(title: "Hint", onDismiss: onBackToQandA)
+    .background(Color(.systemBackground))
   }
+}
+#Preview("Hint") {
+  HintView(ch: Challenge.amock  ){}
 }
 // MARK: - CorrectlyAnsweredView
 struct CorrectlyAnsweredView: View {
-    var question: String
+  var challenge:Challenge
     var onBackToGame: () -> Void
   var body: some View {
         VStack(spacing: 0) {
             // Display the Question
-            Text("You answered correctly: \(question)")
+          Text("You answered correctly:").font(.subheadline)
+          Spacer()
+               Text( "\(challenge.question)")
+                .padding()
+                .multilineTextAlignment(.center)
+          Spacer()
+               Text( "\(challenge.correct )")
                 .padding()
                 .multilineTextAlignment(.center)
             Spacer()
@@ -211,31 +341,35 @@ struct CorrectlyAnsweredView: View {
         .background(Color(.systemBackground))
     }
 }
-#Preview {
-  CorrectlyAnsweredView(question: "test question", onBackToGame: {})
+#Preview("Correct") {
+  CorrectlyAnsweredView(challenge: Challenge.amock, onBackToGame: {})
 }
 // MARK: - IncorrectlyAnsweredView
 struct IncorrectlyAnsweredView: View {
-    var question: String
+    var challenge: Challenge
     var onBackToQandA: () -> Void
     var body: some View {
-        VStack(spacing: 0) {
-
-
-            // Display the Question
-            Text("You answered incorrectly: \(question)")
-                .padding()
-                .multilineTextAlignment(.center)
-
-            Spacer()
-        }
+      VStack(spacing: 0) {
+          // Display the Question
+        Text("You answered incorrectly:").font(.subheadline)
+        Spacer()
+             Text( "\(challenge.question)")
+              .padding()
+              .multilineTextAlignment(.center)
+        Spacer()
+        Text("The correct answer was:")
+             Text( "\(challenge.correct )")
+              .padding()
+              .multilineTextAlignment(.center)
+          Spacer()
+      }
         .withTitleBar(title: "Answered Incorrectly", onDismiss: onBackToQandA)
         .background(Color(.systemBackground))
     
     }
 }
-#Preview {
-  IncorrectlyAnsweredView(question: "test question", onBackToQandA: {})
+#Preview("InCorrect"){
+  IncorrectlyAnsweredView(challenge:Challenge.amock, onBackToQandA: {})
 }
 // MARK: - FreePortView
 struct FreePortView: View {

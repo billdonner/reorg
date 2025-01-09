@@ -9,8 +9,7 @@ import SwiftUI
 // MARK: - QandAView
 struct QandAView: View {
     @State private var showAlert = false
-    @State private var currentQuestion: String
-    @State private var questionTimestamp: String
+    @State private var currentChallenge: Challenge
     @State private var showThumbsUp = false
     @State private var showThumbsDown = false
     @State private var showHint = false
@@ -24,9 +23,8 @@ struct QandAView: View {
     var onIncorrect: () -> Void
     var onBack: () -> Void
 
-    init(question: String, gameState: GameState, onYouWin: @escaping () -> Void, onYouLose: @escaping () -> Void, onCorrect: @escaping () -> Void, onIncorrect: @escaping () -> Void, onBack: @escaping () -> Void) {
-        self._currentQuestion = State(initialValue: question)
-        self._questionTimestamp = State(initialValue: Date().formatted(date: .omitted, time: .standard))
+    init(challenge: Challenge, gameState: GameState, onYouWin: @escaping () -> Void, onYouLose: @escaping () -> Void, onCorrect: @escaping () -> Void, onIncorrect: @escaping () -> Void, onBack: @escaping () -> Void) {
+        self._currentChallenge = State(initialValue: challenge)
         self.gameState = gameState
         self.onYouWin = onYouWin
         self.onYouLose = onYouLose
@@ -43,7 +41,7 @@ struct QandAView: View {
                 .font(.subheadline)
 
             // Current Question
-            Text("\(currentQuestion) (\(questionTimestamp))")
+          Text("\(currentChallenge.question) (\(currentChallenge.date))")
                 .multilineTextAlignment(.center)
                 .padding()
                 .background(Color.gray.opacity(0.1))
@@ -59,7 +57,7 @@ struct QandAView: View {
                 } else {
                     withAnimation(.easeInOut(duration: 0.5)) {
                         isAnimatingReplacement = true // Start the animation
-                        questionTimestamp = Date().formatted(date: .omitted, time: .standard)
+                     
                         answerCounter += 1 // Increment the counter for new labels
                     }
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -79,7 +77,7 @@ struct QandAView: View {
                 }
                 .buttonStyle(.bordered)
                 .fullScreenCover(isPresented: $showThumbsUp) {
-                    ThumbsUpView(onBackToQandA: { showThumbsUp = false })
+                  ThumbsUpView (ch:currentChallenge, onBackToQandA: { showThumbsUp = false })
                 }
 
                 Button("👎 Thumbs Down") {
@@ -87,7 +85,7 @@ struct QandAView: View {
                 }
                 .buttonStyle(.bordered)
                 .fullScreenCover(isPresented: $showThumbsDown) {
-                    ThumbsDownView(onBackToQandA: { showThumbsDown = false })
+                  ThumbsDownView(ch:currentChallenge, onBackToQandA: { showThumbsDown = false })
                 }
             }
 
@@ -97,7 +95,7 @@ struct QandAView: View {
             }
             .buttonStyle(.borderedProminent)
             .fullScreenCover(isPresented: $showHint) {
-                HintView(onBackToQandA: { showHint = false })
+              HintView(ch:currentChallenge,onBackToQandA: { showHint = false })
             }
 
             Spacer()

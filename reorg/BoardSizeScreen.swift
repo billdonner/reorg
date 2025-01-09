@@ -3,7 +3,7 @@ import SwiftUI
 struct BoardSizeScreen: View {
 
   @Binding var gs: GameState
-  @Binding var showSettings: Bool
+//  @Binding var showSettings: Bool
   @State private var l_boardsize: Int
   @State var firstOnAppear = true
   @State private var showSizeChangeAlert = false
@@ -11,10 +11,10 @@ struct BoardSizeScreen: View {
   
   @Environment(\.dismiss) var dismiss
   
-  init(  gs: Binding<GameState>, //lrdb: LeaderboardService,
-       showSettings: Binding<Bool>) {
+  init(  gs: Binding<GameState>
+      ) {
     self._gs = gs
-    self._showSettings = showSettings
+   // self._showSettings = showSettings
     l_boardsize = gs.boardsize.wrappedValue
   }
   
@@ -84,7 +84,7 @@ struct BoardSizeScreen: View {
 
 
 #Preview {
-  BoardSizeScreen(gs: .constant(GameState.mock), showSettings: (.constant(true)))
+  BoardSizeScreen(gs: .constant(GameState.mock))
 }
 struct SizePickerView: View {
    @Binding   var chosenSize: Int

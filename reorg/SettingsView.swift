@@ -8,9 +8,12 @@
 import SwiftUI
 // MARK: - SettingsView
 struct SettingsView: View {
-  var gameState: GameState
+  @Binding var gameState: GameState
   var onNewRound: () -> Void
   @State var showComingFromKwanduh = false
+  @State var showSizeScreen = false
+  @State var showColorScreen = false
+  @State var showTopicsScreen = false
   var body: some View {
     VStack(spacing: 20) {
       Text("Settings")
@@ -21,13 +24,13 @@ struct SettingsView: View {
       Text("Replacements Left: \(gameState.gimmees)")
         .font(.subheadline)
       
-      Button("Size") {showComingFromKwanduh = true}
+      Button("Size") {showSizeScreen = true}
         .buttonStyle(.borderedProminent)
       
       Button("Topics") { showComingFromKwanduh = true}
         .buttonStyle(.borderedProminent)
-      
-      Button("Colors") { showComingFromKwanduh = true}
+      //ColorSchemePickerView
+      Button("Colors") { showColorScreen = true}
         .buttonStyle(.borderedProminent)
       
       Button("Freeport") { gameState.gimmees += 5}
@@ -51,6 +54,12 @@ struct SettingsView: View {
       ComingFromKwanduhView() {
         showComingFromKwanduh = false
       }
+    }
+    .sheet(isPresented: $showSizeScreen) {
+      BoardSizeScreen(gs: $gameState)
+    }
+    .sheet(isPresented: $showColorScreen) {
+      ColorSchemePickerView(gs: $gameState)
     }
   }
 }

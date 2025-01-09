@@ -73,7 +73,7 @@ struct LatinGunkView: View {
 // MARK: - Main App
 let starting_size:Int = 4
 let shouldAssert:Bool = true
-let isDebugModeEnabled:Bool = true
+let isDebugModeEnabled:Bool = false
 let cloudKit:Bool = true
 let cloudKitBypass = true
 let debugBorderColor = Color.red 
@@ -126,14 +126,14 @@ struct ContentView: View {
                     },
                     onSettings: { showAlert = true }
                 )
-            case .qanda(let question):
+            case .qanda(let challenge):
                 QandAView(
-                    question: question,
+                  challenge: challenge,
                     gameState: gameState, // Use GameState for replacement count
                     onYouWin: { withAnimation { gameState.currentView = .youWin } },
                     onYouLose: { withAnimation { gameState.currentView = .youLose } },
-                    onCorrect: { withAnimation { gameState.currentView = .correct(question) } },
-                    onIncorrect: { withAnimation { gameState.currentView = .incorrect(question) } },
+                    onCorrect: { withAnimation { gameState.currentView = .correct(challenge) } },
+                    onIncorrect: { withAnimation { gameState.currentView = .incorrect(challenge) } },
                     onBack: { withAnimation { gameState.currentView = .game } }
                 )
             case .youWin:
@@ -146,19 +146,19 @@ struct ContentView: View {
                     onNewGame: { resetGame() },
                     onSettings: { withAnimation { gameState.currentView = .settings } }
                 )
-            case .correct(let question):
+            case .correct(let challenge):
                 CorrectlyAnsweredView(
-                    question: question,
+                  challenge: challenge,
                     onBackToGame: { withAnimation { gameState.currentView = .game } }
                 )
-            case .incorrect(let question):
+            case .incorrect(let challenge):
                 IncorrectlyAnsweredView(
-                    question: question,
+                  challenge: challenge,
                     onBackToQandA: { withAnimation { gameState.currentView = .game } }
                 )
             case .settings:
                 SettingsView(
-                    gameState: gameState,
+                  gameState: $gameState,
                     onNewRound: { resetGame() }
                     //onIncrementReplacementCount: { gameState.replacementCount += 5 }
                 )

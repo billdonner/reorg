@@ -8,11 +8,11 @@ enum StateOfPlay: Int, Codable {
 }
 enum ViewState: Codable {
     case game
-    case qanda(String)
+    case qanda(Challenge)
     case youWin
     case youLose
-    case correct(String)
-    case incorrect(String)
+    case correct(Challenge)
+  case incorrect(Challenge)
     case settings
 
     private enum CodingKeys: String, CodingKey {
@@ -38,17 +38,17 @@ enum ViewState: Codable {
         case .game:
             self = .game
         case .qanda:
-            let value = try container.decode(String.self, forKey: .value)
+            let value = try container.decode(Challenge.self, forKey: .value)
             self = .qanda(value)
         case .youWin:
             self = .youWin
         case .youLose:
             self = .youLose
         case .correct:
-            let value = try container.decode(String.self, forKey: .value)
+            let value = try container.decode(Challenge.self, forKey: .value)
             self = .correct(value)
         case .incorrect:
-            let value = try container.decode(String.self, forKey: .value)
+            let value = try container.decode(Challenge.self, forKey: .value)
             self = .incorrect(value)
         case .settings:
             self = .settings

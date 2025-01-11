@@ -6,58 +6,95 @@
 //
 
 import SwiftUI
+
+
+enum GameAlertType: Identifiable {
+  case mustTapAdjacentCell
+  case mustStartInCorner
+  case cantStart
+  case otherDiagonal
+  case sameSideDiagonal
+  case youWin
+  case youLose
+  
+  var id: String {
+    switch self {
+    case .mustTapAdjacentCell: return "mustTapAdjacentCell"
+    case .mustStartInCorner: return "mustStartInCorner"
+    case .cantStart: return "cantStart"
+    case .otherDiagonal: return "otherDiagonal"
+    case .sameSideDiagonal: return "sameSideDiagonal"
+    case .youWin: return "youWin"
+    case .youLose: return "youLose"
+    }
+  }
+}
+
+
 // MARK: - MainGameView
 struct MainGameView: View {
-    var gameState: GameState
+    var gs: GameState
+  let chmgr: ChaMan
+  
+  @Binding var topics: [String: FreeportColor]
     var onQandA: (Challenge) -> Void // Pass the selected question
     var onSettings: () -> Void
-
-    private let gridColors: [Color] = [.red, .yellow, .blue] // Define the three colors
+  struct Xdi: Identifiable
+  {
+    let row:Int
+    let col:Int
+    let challenge: Challenge
+    let id=UUID()
+  }
+  @State var alreadyPlayed: Xdi?
+  
+  @State var chal: IdentifiablePoint? = nil
+  @State var activeAlert: GameAlertType?
+  @State  var isWinAlertPresented = false
+  @State  var isLoseAlertPresented = false
+  
+  @State var otherDiagShownCount = maxShowOtherDiag
+  @State var sameDiagShownCount = maxShowSameDiag
+   
 
     var body: some View {
         VStack(spacing: 20) {
             HStack {
-                Text("Live Game Running")
+                Text("QANDA Live Game")
                     .font(.largeTitle)
                     .bold()
                 Spacer()
                 Button(action: onSettings) {
                     Image(systemName: "gear")
-                        .font(.title)
+                        .font(.largeTitle)
                         .foregroundColor(.primary)
                 }
                 .padding(.trailing)
             }
-            .padding(.top)
+           // .padding(.top)
 
-          Text("Replacements Left: \(gameState.gimmees)")
-                .font(.subheadline)
-                .padding(.bottom)
-
-            // Grid of Touchpoints with Three Colors
-            VStack(spacing: 10) {
-                ForEach(0..<5, id: \.self) { row in
-                    HStack(spacing: 10) {
-                        ForEach(0..<5, id: \.self) { col in
-                            //let questionIndex = row * 5 + col
-                            Button(action: {
-                              onQandA(Challenge.amock )
-                            }) {
-                                Circle()
-                                    .fill(randomGridColor())
-                                    .frame(width: 50, height: 50)
-                            }
-                        }
-                    }
-                }
-            }
+Spacer()
+          
+          // Main game grid
+          MainGridView(
+            gs: gs,
+            chmgr: gs.chmgr!,
+            onSingleTap: onSingleTap
+          )
+//          .frame(width: geometry.size.width, height: geometry.size.width)
+          
+          
 
             Spacer()
+          
+          ScoreBarView (gs: gs)
         }
         .padding()
     }
 
-    private func randomGridColor() -> Color {
-        gridColors.randomElement() ?? .gray // Randomly pick one of the defined colors
-    }
 }
+
+#Preview {
+  MainGameView(gs: GameState.mock, chmgr: ChaMan.mock, topics: .constant([:]), onQandA: {_ in }, onSettings: {})
+}
+ 

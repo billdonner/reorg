@@ -548,3 +548,22 @@ func getRandomTopics(_ count: Int, from topics: [String]) -> [String] {
   return t
 }
 
+//https://useyourloaf.com/blog/iphone-16-screen-sizes/
+// Function to calculate VStack spacing based on screen width
+func spacing(for width: CGFloat) -> CGFloat {
+    let spacingTable: [(width: CGFloat, spacing: CGFloat)] = [
+        (320, 4),   // iPhone SE (1st generation), iPhone 5, 5S, 5C
+        (375, 4),  // iPhone 6, iPhone 6S, iPhone 7, iPhone 8, iPhone SE (2nd & 3rd generation)
+        (390, 15),  // iPhone 11 Pro, iPhone 12, iPhone 13, iPhone 14, iPhone 15
+        (393, 27),  // iPhone 15 Pro, iphone 16
+        (402,30),// iphone 16 pro
+        (414, 20),  // iPhone 6 Plus, iPhone 6S Plus, iPhone 7 Plus, iPhone 8 Plus, iPhone 11, iPhone 14 Plus
+        (428, 35),  // iPhone 14 Pro Max, iPhone 15 Plus
+        (430, 37),  // iPhone 15 Pro Max, iphone 16 Plus
+        (440, 40)   //  iPhone 16 Pro Max
+    ]
+
+    // Find the closest match from the table
+    let closestMatch = spacingTable.min { abs($0.width - width) < abs($1.width - width) }
+    return closestMatch?.spacing ?? 10 // Default spacing
+}

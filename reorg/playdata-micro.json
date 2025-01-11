@@ -1,0 +1,3384 @@
+{
+  "topicData" : {
+    "topics" : [
+      {
+        "name" : "Animals",
+        "subtopics" : [
+
+        ],
+        "subject" : "Animals",
+        "pic" : "pencil",
+        "notes" : "Notes for pencil"
+      },
+      {
+        "subtopics" : [
+
+        ],
+        "pic" : "pencil",
+        "subject" : "Beatles Lyrics",
+        "notes" : "Notes for pencil",
+        "name" : "Beatles Lyrics"
+      },
+      {
+        "name" : "Countries",
+        "pic" : "pencil",
+        "subject" : "Countries",
+        "subtopics" : [
+
+        ],
+        "notes" : "Notes for pencil"
+      },
+      {
+        "notes" : "Notes for pencil",
+        "pic" : "pencil",
+        "name" : "Food",
+        "subject" : "Food",
+        "subtopics" : [
+
+        ]
+      },
+      {
+        "pic" : "pencil",
+        "subtopics" : [
+
+        ],
+        "subject" : "Golden Age of Movies",
+        "notes" : "Notes for pencil",
+        "name" : "Golden Age of Movies"
+      },
+      {
+        "notes" : "Notes for pencil",
+        "subject" : "James Bond Films",
+        "subtopics" : [
+
+        ],
+        "name" : "James Bond Films",
+        "pic" : "pencil"
+      },
+      {
+        "name" : "Moderately Easy Math",
+        "pic" : "pencil",
+        "notes" : "Notes for pencil",
+        "subject" : "Moderately Easy Math",
+        "subtopics" : [
+
+        ]
+      },
+      {
+        "notes" : "Notes for pencil",
+        "name" : "Outer Space",
+        "pic" : "pencil",
+        "subject" : "Outer Space",
+        "subtopics" : [
+
+        ]
+      },
+      {
+        "notes" : "Notes for pencil",
+        "subject" : "Rules of Baseball",
+        "name" : "Rules of Baseball",
+        "pic" : "pencil",
+        "subtopics" : [
+
+        ]
+      },
+      {
+        "notes" : "Notes for pencil",
+        "subtopics" : [
+
+        ],
+        "name" : "Spain",
+        "subject" : "Spain",
+        "pic" : "pencil"
+      }
+    ],
+    "author" : "freeport",
+    "description" : "missing",
+    "date" : "2024-09-17 18:17:52 +0000",
+    "version" : "0.0.0"
+  },
+  "blendDate" : 748289872.58905,
+  "playDataId" : "1CE9CBDD-F71B-4ACB-8A6F-13EB22F8DCF7",
+  "gameDatum" : [
+    {
+      "topic" : "Animals",
+      "id" : "59C7DD90-B3AA-48A7-B100-41A5569F60D5",
+      "challenges" : [
+        {
+          "question" : "Which monkey has a brightly colored face?",
+          "date" : 736812723.99456,
+          "explanation" : "",
+          "correct" : "Mandrill",
+          "answers" : [
+            "Mandrill",
+            "Baboon",
+            "Capuchin",
+            "Howler Monkey"
+          ],
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "id" : "19E351D8-5BA3-4007-BFC8-3646FD8C95D6",
+          "topic" : "Animals"
+        },
+        {
+          "answers" : [
+            "Parakeet",
+            "Macaw",
+            "Crow",
+            "Sparrow"
+          ],
+          "date" : 736812723.995565,
+          "hint" : ".",
+          "question" : "Which bird has a beak strong enough to crack nuts?",
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "6D38AFB5-2C7E-4C38-88F2-59E794CF7457",
+          "topic" : "Animals",
+          "explanation" : "",
+          "correct" : "Macaw"
+        },
+        {
+          "id" : "17E14CF8-9444-47A0-8FC4-5146769A2D43",
+          "correct" : "Parrot",
+          "topic" : "Animals",
+          "hint" : ".",
+          "answers" : [
+            "Chimpanzee",
+            "Dolphin",
+            "Parrot",
+            "Elephant"
+          ],
+          "explanation" : "",
+          "date" : 736812723.99868,
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "What animal can mimic human speech?"
+        },
+        {
+          "topic" : "Animals",
+          "id" : "5F089691-D963-460E-A909-AFCD53BE6BCA",
+          "question" : "Which animal is not known for its laughter-like call?",
+          "correct" : "Lion",
+          "answers" : [
+            "Hyena",
+            "Kookaburra",
+            "Dolphin",
+            "Lion"
+          ],
+          "hint" : ".",
+          "explanation" : "",
+          "date" : 736812724.005386,
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "date" : 736812724.011065,
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "question" : "What tropical animal is known for being sluggish?",
+          "topic" : "Animals",
+          "explanation" : "",
+          "id" : "1F3522B4-015A-4574-A438-BD765A8078EE",
+          "answers" : [
+            "Koala",
+            "Sloth",
+            "Capuchin",
+            "Chimpanzee"
+          ],
+          "correct" : "Sloth"
+        },
+        {
+          "answers" : [
+            "Seahorse",
+            "Whale",
+            "Eel",
+            "Octopus"
+          ],
+          "question" : "Which sea creature communicates with complex songs?",
+          "topic" : "Animals",
+          "id" : "7B6B4F95-FD01-4DDC-BE4C-3780F03E33EE",
+          "hint" : ".",
+          "date" : 736812724.01138,
+          "correct" : "Whale",
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "hint" : ".",
+          "correct" : "Firefly",
+          "answers" : [
+            "Beetle",
+            "Firefly",
+            "Glow Worm",
+            "Cockroach"
+          ],
+          "topic" : "Animals",
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 736812724.011697,
+          "question" : "Which of these insects cannot produce light through bioluminescence?",
+          "explanation" : "",
+          "id" : "7ED42901-5067-4316-A9FD-9996712FE16A"
+        },
+        {
+          "hint" : ".",
+          "topic" : "Animals",
+          "date" : 736812724.013543,
+          "answers" : [
+            "Octopus",
+            "Starfish",
+            "Shark",
+            "Jellyfish"
+          ],
+          "correct" : "Jellyfish",
+          "explanation" : "",
+          "question" : "Which sea creature has stingers?",
+          "id" : "24F32F88-02E4-4EE2-88E7-21AA2FCF2FD4",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "question" : "What insect produces a cocoon before becoming a moth?",
+          "topic" : "Animals",
+          "id" : "7A98402C-91A7-47BE-A0AF-3464B088D3FD",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "date" : 736812724.01463,
+          "hint" : ".",
+          "correct" : "Caterpillar",
+          "answers" : [
+            "Beetle",
+            "Butterfly",
+            "Caterpillar",
+            "Dragonfly"
+          ]
+        },
+        {
+          "hint" : ".",
+          "explanation" : "",
+          "question" : "Which fish camouflages itself as a leaf?",
+          "topic" : "Animals",
+          "answers" : [
+            "Clownfish",
+            "South American Leaf Fish",
+            "Anglerfish",
+            "Seahorse"
+          ],
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "9B502762-F100-4166-9419-C9D626E54E35",
+          "correct" : "South American Leaf Fish",
+          "date" : 736812724.014862
+        },
+        {
+          "question" : "What reptile can run on water?",
+          "explanation" : "The basilisk lizard can run on water for short distances due to the unique structure of its feet.",
+          "topic" : "Animals",
+          "aisource" : "gpt-4o",
+          "id" : "5FA1416A-1010-4318-B74B-62DEF12F7B4A",
+          "answers" : [
+            "Basilisk Lizard",
+            "Iguana",
+            "Cobra",
+            "Komodo Dragon"
+          ],
+          "hint" : "Also called the Jesus Christ Lizard.",
+          "date" : 741744905.971025,
+          "correct" : "Basilisk Lizard"
+        },
+        {
+          "topic" : "Animals",
+          "hint" : "Lives in hives.",
+          "date" : 741744905.971553,
+          "aisource" : "gpt-4o",
+          "question" : "What insect creates honey?",
+          "answers" : [
+            "Butterfly",
+            "Ladybug",
+            "Bee",
+            "Beetle"
+          ],
+          "explanation" : "Bees collect nectar from flowers and convert it into honey, storing it in their hives.",
+          "id" : "8C921965-7C16-42B9-85C5-BE12A376250B",
+          "correct" : "Bee"
+        },
+        {
+          "id" : "24E356D6-ABA6-4E9E-889D-080A2B313760",
+          "correct" : "African Elephant",
+          "explanation" : "Elephants have a gestation period of around 22 months, the longest of any land mammal.",
+          "date" : 741744905.973927,
+          "hint" : "The largest land animal.",
+          "question" : "Which mammal has the longest gestation period?",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Asian Elephant",
+            "Whale",
+            "African Elephant",
+            "Giraffe"
+          ],
+          "topic" : "Animals"
+        },
+        {
+          "hint" : "Known for standing on one leg.",
+          "topic" : "Animals",
+          "id" : "34E9BB39-0C16-446B-950C-752E1D46C29A",
+          "question" : "Which bird can turn its head completely upside down to eat?",
+          "date" : 741744905.974369,
+          "aisource" : "gpt-4o",
+          "correct" : "Flamingo",
+          "answers" : [
+            "Owl",
+            "Parrot",
+            "Flamingo",
+            "Pigeon"
+          ],
+          "explanation" : "Flamingos can turn their heads completely upside down, which helps them feed using their unique beaks."
+        },
+        {
+          "question" : "What is the only bird that can fly backward?",
+          "id" : "7C3CDB30-32B6-41FE-8761-25D87C6893D6",
+          "hint" : "Known for its rapid wing beats.",
+          "topic" : "Animals",
+          "answers" : [
+            "Hummingbird",
+            "Sparrow",
+            "Eagle",
+            "Robin"
+          ],
+          "explanation" : "Hummingbirds are the only birds capable of flying backward, thanks to their unique wing structure and rapid wing beats.",
+          "date" : 741744905.977218,
+          "correct" : "Hummingbird",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "topic" : "Animals",
+          "id" : "5F104096-A25F-4DAA-B68A-CDBB0BBDEEB0",
+          "hint" : "Name means 'thousand feet'.",
+          "correct" : "Millipede",
+          "answers" : [
+            "Spider",
+            "Scorpion",
+            "Millipede",
+            "Centipede"
+          ],
+          "explanation" : "Millipedes have the most legs of any animal, with some species having up to 750 legs.",
+          "date" : 741744905.978365,
+          "question" : "Which animal has the most legs?",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "topic" : "Animals",
+          "correct" : "Opossum",
+          "aisource" : "gpt-4o",
+          "explanation" : "Opossums have prehensile tails that help them grasp and manipulate objects.",
+          "id" : "32A9DE24-C660-4E40-BAD4-32CC1C5B224C",
+          "answers" : [
+            "Koala",
+            "Cat",
+            "Opossum",
+            "Bear"
+          ],
+          "question" : "What mammal has a prehensile tail?",
+          "hint" : "Often plays dead to escape predators.",
+          "date" : 741744905.979128
+        },
+        {
+          "id" : "3CFEFB92-0D2B-4814-8B51-9CCAA47F4CEF",
+          "date" : 741744905.980381,
+          "correct" : "Peacock",
+          "answers" : [
+            "Crow",
+            "Peacock",
+            "Pigeon",
+            "Ostrich"
+          ],
+          "topic" : "Animals",
+          "aisource" : "gpt-4o",
+          "hint" : "Displays a large fan of feathers.",
+          "question" : "What bird's feathers are iridescent?",
+          "explanation" : "Peacocks have iridescent feathers that shimmer in different colors depending on the angle of light."
+        },
+        {
+          "topic" : "Animals",
+          "id" : "1EFA247F-01D7-4640-8CAD-50FE96D80DE6",
+          "answers" : [
+            "Kangaroo",
+            "Raccoon",
+            "Elephant",
+            "Zebra"
+          ],
+          "correct" : "Raccoon",
+          "date" : 741744905.980935,
+          "explanation" : "Raccoons are easily recognized by their distinctive mask-like facial markings.",
+          "aisource" : "gpt-4o",
+          "question" : "What mammal is known for its mask-like face markings?",
+          "hint" : "Often rummages through garbage bins."
+        },
+        {
+          "aisource" : "gpt-4o",
+          "hint" : "Has five arms radiating from a central disc.",
+          "answers" : [
+            "Starfish",
+            "Sea Urchin",
+            "Seahorse",
+            "Jellyfish"
+          ],
+          "id" : "3D76F32B-BB32-4222-9CD6-08E9A8434DEA",
+          "date" : 741744905.981854,
+          "topic" : "Animals",
+          "correct" : "Starfish",
+          "explanation" : "The Crown-of-Thorns Starfish is named for its numerous spines that resemble a crown of thorns.",
+          "question" : "What sea creature has a crown of thorns?"
+        }
+      ],
+      "pic" : "leaf",
+      "generated" : 748289872.588694
+    },
+    {
+      "generated" : 748289872.588734,
+      "id" : "B89EA757-E483-4387-BA9A-8033319DC278",
+      "pic" : "leaf",
+      "topic" : "Beatles Lyrics",
+      "challenges" : [
+        {
+          "correct" : "Act Naturally",
+          "question" : "“They're gonna put me in the movies, They're gonna make a big star out of me” comes from which Beatles' song?",
+          "answers" : [
+            "The Night Before",
+            "Act Naturally",
+            "I’ve Just Seen a Face",
+            "I Need You"
+          ],
+          "hint" : "This song was originally sung by Buck Owens before The Beatles' covered it.",
+          "aisource" : "gpt-4o",
+          "topic" : "Beatles Lyrics",
+          "id" : "9C00B758-BBC6-45D3-BC62-E971B04E8938",
+          "explanation" : "The lyric 'They're gonna put me in the movies' is from the song 'Act Naturally,' which was sung by Ringo Starr in The Beatles'' version.",
+          "date" : 742072791.443461
+        },
+        {
+          "correct" : "And I Love Her",
+          "date" : 742072791.444176,
+          "question" : "“Bright are the stars that shine, dark is the sky” comes from which Beatles' song?",
+          "aisource" : "gpt-4o",
+          "hint" : "A Hard Day's Night.",
+          "id" : "9AE25912-11EF-4312-84BB-545A1E14977E",
+          "explanation" : "The lyrics are from the song 'And I Love Her', which was released in 1964.",
+          "answers" : [
+            "If I Fell",
+            "Any Time At All",
+            "Michelle",
+            "And I Love Her"
+          ],
+          "topic" : "Beatles Lyrics"
+        },
+        {
+          "hint" : ".",
+          "explanation" : "",
+          "correct" : "Back in the U.S.S.R.",
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "\"You don't know how lucky you are, boy” - From what song?",
+          "id" : "9F2A3DC9-6A32-44ED-90FF-D8F17D58B3C6",
+          "topic" : "Beatles Lyrics",
+          "date" : 742072791.444803,
+          "answers" : [
+            "Back in the U.S.S.R.",
+            "Wild Honey Pie",
+            "Rocky Raccoon",
+            "Piggies"
+          ]
+        },
+        {
+          "answers" : [
+            "Hear Comes the Sun",
+            "The End",
+            "Because",
+            "Octopus’s Garden"
+          ],
+          "topic" : "Beatles Lyrics",
+          "id" : "1D38CE7F-B06A-409D-ABE4-FAA01C7561C4",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Because",
+          "date" : 742072791.44532,
+          "hint" : ".",
+          "explanation" : "",
+          "question" : "\"Love is old, love is new, love is all, love is you” - Which song?"
+        },
+        {
+          "hint" : "This song has a fairy tale theme.",
+          "correct" : "Cry Baby Cry",
+          "topic" : "Beatles Lyrics",
+          "answers" : [
+            "The Continuing Story of Bungalow Bill",
+            "Rocky Raccoon",
+            "Martha My Dear",
+            "Cry Baby Cry"
+          ],
+          "aisource" : "gpt-4o",
+          "explanation" : "The lyric 'The Duchess of Kircaldy always smiling' is from the song 'Cry Baby Cry,' which is featured on the 'White Album'.",
+          "id" : "1ACD6D52-F525-4D77-8157-0874104D24B7",
+          "date" : 742072791.446719,
+          "question" : "“The Duchess of Kircaldy always smiling” comes from which Beatles' song?"
+        },
+        {
+          "hint" : "It's from the 'White Album'.",
+          "id" : "61C72734-E041-4D1C-A550-EC477B6359AC",
+          "date" : 742072791.447273,
+          "explanation" : "'Dear Prudence' is a song by the Beatles from their 'White Album'.",
+          "correct" : "Dear Prudence",
+          "question" : "“… won’t you come out to play?” comes from which Beatles' song?",
+          "aisource" : "gpt-4o",
+          "topic" : "Beatles Lyrics",
+          "answers" : [
+            "Hey Jude",
+            "Dear Prudence",
+            "I'm Looking Through You",
+            "I Want To Hold Your Hand"
+          ]
+        },
+        {
+          "date" : 742072791.447977,
+          "id" : "08F8C88F-5C17-4D33-A40B-10775AF92DB4",
+          "question" : "“… picks up the rice in the church where a wedding has been” comes from which Beatles' song?",
+          "explanation" : "'Eleanor Rigby' is a track from The Beatles' album Revolver.",
+          "hint" : "This song features a string quartet and tells the story of a lonely woman.",
+          "topic" : "Beatles Lyrics",
+          "answers" : [
+            "For No One",
+            "Taxman",
+            "Lucy In The Sky With Diamonds",
+            "Eleanor Rigby"
+          ],
+          "correct" : "Eleanor Rigby",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "topic" : "Beatles Lyrics",
+          "explanation" : "'Getting Better' is a track from The Beatles' album Sgt. Pepper's Lonely Hearts Club Band.",
+          "date" : 742072791.449526,
+          "aisource" : "gpt-4o",
+          "question" : "“I've got to admit it's …” comes from which Beatles' song?",
+          "answers" : [
+            "Hey Jude",
+            "A Day In The Life",
+            "Getting Better",
+            "Eleanor Rigby"
+          ],
+          "id" : "1DA26A7F-994D-4E61-93BC-17E499ECE332",
+          "hint" : "It's from the album Sgt. Pepper's Lonely Hearts Club Band.",
+          "correct" : "Getting Better"
+        },
+        {
+          "explanation" : "The lyric 'Was she told when she was young that pain would lead to pleasure?' is from the song 'She's Leaving Home,' which is featured on the 'Sgt. Pepper's Lonely Hearts Club Band' album.",
+          "correct" : "Girl",
+          "aisource" : "gpt-4o",
+          "id" : "59F12276-4D33-4B9F-B462-4AD65D50D8C0",
+          "date" : 742072791.449728,
+          "answers" : [
+            "Norwegian Wood",
+            "Get Back",
+            "She's Leaving Home",
+            "Girl"
+          ],
+          "topic" : "Beatles Lyrics",
+          "question" : "“Was she told when she was young that pain would lead to pleasure?” comes from which Beatles' song?",
+          "hint" : "This song tells the story of a girl who runs away from home."
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "id" : "7B117BB0-E489-4570-BE3D-DF0D0329E451",
+          "correct" : "Glass Onion",
+          "question" : "\"The walrus was Paul” - Name this song.",
+          "hint" : ".",
+          "date" : 742072791.449889,
+          "answers" : [
+            "I'm So Tired",
+            "Let It Be",
+            "While My Guitar Gently Weeps",
+            "Glass Onion"
+          ],
+          "topic" : "Beatles Lyrics"
+        },
+        {
+          "explanation" : "'Golden Slumbers' is a Beatles song by Paul McCartney from the 'Abbey Road' album.",
+          "question" : "“Smiles await you when you rise” comes from which Beatles' song?",
+          "hint" : "The same name as a lullaby.",
+          "id" : "47E868AB-5266-412A-9CCB-CB73A94BB15F",
+          "answers" : [
+            "Golden Slumbers",
+            "Hey Jude",
+            "Here Comes The Sun",
+            "Let It Be"
+          ],
+          "topic" : "Beatles Lyrics",
+          "correct" : "Golden Slumbers",
+          "date" : 742072791.450061,
+          "aisource" : "gpt-4o"
+        },
+        {
+          "correct" : "Here Comes the Sun",
+          "date" : 742072791.451684,
+          "question" : "“Little darling, it's been a long cold lonely winter” comes from which Beatles' song?",
+          "topic" : "Beatles Lyrics",
+          "explanation" : "The lyric 'Little darling, it's been a long cold lonely winter' is from the song 'Here Comes the Sun,' which was written by George Harrison and is featured on the 'Abbey Road' album.",
+          "hint" : "This song was written by George Harrison in Eric Clapton's garden.",
+          "aisource" : "gpt-4o",
+          "id" : "5D88631D-799C-44B7-95DB-336A9A873B50",
+          "answers" : [
+            "Something",
+            "Here Comes the Sun",
+            "I'll Follow the Sun",
+            "Golden Slumbers"
+          ]
+        },
+        {
+          "topic" : "Beatles Lyrics",
+          "answers" : [
+            "Hey Jude",
+            "I Am The Walrus",
+            "While My Guitar Gently Weeps",
+            "Magical Mystery Tour"
+          ],
+          "date" : 742072791.452343,
+          "question" : "“Goo goo g’joob” comes from which Beatles' song?",
+          "hint" : "A whimsical, surreal song.......",
+          "explanation" : "'I Am The Walrus' is a song by the Beatles, written by John Lennon and featured on the 'Magical Mystery Tour' album.",
+          "correct" : "I Am The Walrus",
+          "aisource" : "gpt-4o",
+          "id" : "61ABF3A6-B836-4AB2-A1F9-B2AC57C69B42"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "correct" : "I Saw Her Standing There",
+          "answers" : [
+            "Please Please Me",
+            "I Saw Her Standing There",
+            "Ask Me Why",
+            "Do You Want to Know a Secret"
+          ],
+          "explanation" : "The lyric 'I saw you, yeah you smiled at me and you looked so fine' is from the song 'I Saw Her Standing There,' which was the opening track on 'Please Please Me.'",
+          "question" : "“Well, she was just seventeen” comes from which Beatles' song?",
+          "topic" : "Beatles Lyrics",
+          "date" : 742072791.452806,
+          "id" : "9A875D5D-C7BC-4B26-B7F4-10F4D7CC4D6A",
+          "hint" : "This song was the opening track on The Beatles'' debut album, 'Please Please Me.'..."
+        },
+        {
+          "id" : "9F03290F-65B2-49A3-82BA-BD7B2926300B",
+          "topic" : "Beatles Lyrics",
+          "date" : 742072791.453525,
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "When I'm Sixty-Four",
+            "She's Leaving Home",
+            "A Hard Day's Night",
+            "I’m Down"
+          ],
+          "explanation" : "The lyric 'Man buys ring, woman throws it away' is from the song 'Ob-La-Di, Ob-La-Da,' which is on The Beatles'' 'White Album'.",
+          "correct" : "I’m Down",
+          "question" : "“Man buys ring, woman throws it away” comes from which Beatles' song?",
+          "hint" : "This song features upbeat, reggae-inspired piano and was a hit in Jamaica...."
+        },
+        {
+          "question" : "“Follow her down to a bridge by a fountain” comes from which Beatles' song?",
+          "hint" : "This song was famously rumored to be about LSD.",
+          "date" : 742072791.456086,
+          "topic" : "Beatles Lyrics",
+          "answers" : [
+            "Sgt. Pepper’s Lonely Hearts Club Band",
+            "Lucy In The Sky With Diamonds",
+            "Being For The Benefit Of Mr. Kite!",
+            "I Am The Walrus"
+          ],
+          "explanation" : "'Lucy In The Sky With Diamonds' is a track from The Beatles' album Sgt. Pepper's Lonely Hearts Club Band.",
+          "correct" : "Lucy In The Sky With Diamonds",
+          "aisource" : "gpt-4o",
+          "id" : "0FD8B437-0E45-4C6E-92AF-68BDAA41A87D"
+        },
+        {
+          "hint" : "It's from 'Abbey Road'.",
+          "id" : "5D05B023-A9F9-4BD1-B3D8-50310F339C41",
+          "date" : 742072791.456481,
+          "topic" : "Beatles Lyrics",
+          "explanation" : "'Maxwell's Silver Hammer' is a song by the Beatles released on the 'Abbey Road' album in 1969.",
+          "question" : "“Joan was quizzical, studied paraphysical science in the home” comes from which Beatles' song?",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Maxwell's Silver Hammer",
+            "Lucy In The Sky With Diamonds",
+            "Something",
+            "Come Together"
+          ],
+          "correct" : "Maxwell's Silver Hammer"
+        },
+        {
+          "hint" : "A single, released alongside 'Day Tripper'.....",
+          "question" : "“Try to see it my way, do I have to keep on talking till I can't go on?” comes from which Beatles' song?",
+          "topic" : "Beatles Lyrics",
+          "explanation" : "The lyrics are from the song 'We Can Work It Out', which was released in 1965.",
+          "correct" : "We Can Work It Out",
+          "date" : 742072791.46198,
+          "aisource" : "gpt-4o",
+          "id" : "3B3DCC7D-29EB-4A08-8BC9-38F4C17D4543",
+          "answers" : [
+            "Come Together",
+            "We Can Work It Out",
+            "All You Need Is Love",
+            "The End"
+          ]
+        },
+        {
+          "answers" : [
+            "You Never Give Me Your Money",
+            "I Am the Walrus",
+            "A Day in the Life",
+            "Let It Be"
+          ],
+          "correct" : "You Never Give Me Your Money",
+          "id" : "4BE48B40-5577-472C-9969-AD1158ECC65B",
+          "question" : "\"You only give me your funny paper And in the middle of negotiations You break down” - Identify the song.",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Beatles Lyrics",
+          "explanation" : "",
+          "date" : 742072791.463219
+        },
+        {
+          "date" : 742072791.463391,
+          "explanation" : "",
+          "correct" : "You Won’t See Me",
+          "id" : "2B569AC2-E9F0-48D7-8045-A9E4EC92085A",
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "\"I wouldn't mind If I knew what I was missing” - From what song?",
+          "hint" : ".",
+          "answers" : [
+            "Come Together",
+            "Money (That's What I Want)",
+            "A Day in the Life",
+            "You Won’t See Me"
+          ],
+          "topic" : "Beatles Lyrics"
+        }
+      ]
+    },
+    {
+      "pic" : "leaf",
+      "generated" : 748289872.588769,
+      "id" : "84DFC1CD-048C-45E4-AFF4-AE8B6D37F38F",
+      "topic" : "Countries",
+      "challenges" : [
+        {
+          "topic" : "Countries",
+          "aisource" : "gpt-4o",
+          "date" : 742276848.788301,
+          "correct" : "Angola",
+          "hint" : "This country is located on the southwestern coast of Africa.",
+          "explanation" : "The giant sable antelope is an endangered species and a national symbol of Angola.",
+          "id" : "1C0C1CB8-C5BB-43C5-89A6-8357833C27C2",
+          "question" : "Which country’s national symbol is the giant sable antelope?",
+          "answers" : [
+            "Angola",
+            "Namibia",
+            "South Africa",
+            "Zimbabwe"
+          ]
+        },
+        {
+          "id" : "0E33BE59-A6EA-42B8-BECB-FE2C9B22BA5D",
+          "answers" : [
+            "Italy",
+            "Austria",
+            "Switzerland",
+            "Germany"
+          ],
+          "correct" : "Austria",
+          "topic" : "Countries",
+          "date" : 742276848.790842,
+          "aisource" : "gpt-4o",
+          "hint" : "This country is known for its alpine regions and being the home of Mozart.",
+          "explanation" : "Austria is renowned for its numerous caves, including Eisriesenwelt, the world's largest ice cave.",
+          "question" : "Which European country has more than 6,000 caves, including the world's highest-altitude ice cave?"
+        },
+        {
+          "explanation" : "Azerbaijan is known for its numerous mud volcanoes, which make up nearly half of the world's total.",
+          "id" : "3DF72715-B95D-4FB2-BEE0-060AE3D9B2F8",
+          "question" : "Which country is famous for mud volcanoes, having half of the world's total?",
+          "answers" : [
+            "Indonesia",
+            "Azerbaijan",
+            "Philippines",
+            "Turkey"
+          ],
+          "hint" : "This country is located in the South Caucasus region of Eurasia.",
+          "topic" : "Countries",
+          "aisource" : "gpt-4o",
+          "date" : 742276848.791813,
+          "correct" : "Azerbaijan"
+        },
+        {
+          "answers" : [
+            "Bhutan",
+            "Nepal",
+            "Sri Lanka",
+            "Maldives"
+          ],
+          "correct" : "Bhutan",
+          "hint" : "This Himalayan kingdom is known for prioritizing the well-being of its citizens.",
+          "explanation" : "Bhutan has developed Gross National Happiness as a measure of its country's prosperity and well-being.",
+          "topic" : "Countries",
+          "aisource" : "gpt-4o",
+          "date" : 742276848.79409,
+          "question" : "Which country measures its prosperity by Gross National Happiness instead of GDP?",
+          "id" : "0D4915EC-EA58-4CEF-AA87-9242E83AC4B7"
+        },
+        {
+          "id" : "8C8C794E-3A19-4B56-B8ED-2711039EA2D2",
+          "question" : "Which Balkan country is known for Olympic success in weightlifting and wrestling?",
+          "aisource" : "gpt-4o",
+          "correct" : "Bulgaria",
+          "hint" : "This nation's capital is Sofia.",
+          "explanation" : "Bulgaria has a long history of success in Olympic weightlifting and wrestling.",
+          "topic" : "Countries",
+          "answers" : [
+            "Greece",
+            "Bulgaria",
+            "Serbia",
+            "Romania"
+          ],
+          "date" : 742276848.795918
+        },
+        {
+          "topic" : "Countries",
+          "id" : "3B58842A-3119-4A1F-9B9F-F825C72AD0B8",
+          "date" : 742276848.798265,
+          "explanation" : "Lake Chad is located in Chad and was once one of the largest lakes in Africa, though it has significantly shrunk over the years.",
+          "hint" : "The country shares a name with the lake.",
+          "aisource" : "gpt-4o",
+          "question" : "Which country is home to Lake Chad, once one of Africa's largest lakes?",
+          "correct" : "Chad",
+          "answers" : [
+            "Uganda",
+            "Botswana",
+            "Chad",
+            "Angola"
+          ]
+        },
+        {
+          "question" : "Which South American country has the world's driest desert, the Atacama?",
+          "explanation" : "Chile is home to the Atacama Desert, the driest desert in the world.",
+          "aisource" : "gpt-4o",
+          "date" : 742276848.798456,
+          "answers" : [
+            "Uruguay",
+            "Ecuador",
+            "Chile",
+            "Bolivia"
+          ],
+          "topic" : "Countries",
+          "correct" : "Chile",
+          "hint" : "Western edge of South America, long coastline.",
+          "id" : "3D1B5DD0-06BB-4CC2-89B1-A31A9C58BF58"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "topic" : "Countries",
+          "hint" : "Island nation, Bob Marley.",
+          "question" : "Which Caribbean country is the birthplace of reggae music?",
+          "explanation" : "Jamaica is recognized globally as the birthplace of reggae music.",
+          "answers" : [
+            "Jamaica",
+            "Trinidad and Tobago",
+            "Barbados",
+            "Bahamas"
+          ],
+          "id" : "8BFFA441-9B6B-4D23-BF20-901276721033",
+          "date" : 742276848.805389,
+          "correct" : "Jamaica"
+        },
+        {
+          "date" : 742276848.806222,
+          "question" : "Which Asian country is celebrated for hanami, its cherry blossoms festival?",
+          "topic" : "Countries",
+          "answers" : [
+            "China",
+            "South Korea",
+            "Japan",
+            "Vietnam"
+          ],
+          "explanation" : "Japan is famous for its cherry blossoms, and hanami is the traditional practice of enjoying the transient beauty of flowers.",
+          "hint" : "Tokyo is the capital.",
+          "correct" : "Japan",
+          "aisource" : "gpt-4o",
+          "id" : "04B83A49-3DAE-41D4-A329-9DC813EC6086"
+        },
+        {
+          "answers" : [
+            "Barbados",
+            "Maldives",
+            "Madagascar",
+            "Malta"
+          ],
+          "aisource" : "gpt-4o",
+          "hint" : "It's one of the lowest countries in terms of altitude.",
+          "correct" : "Maldives",
+          "topic" : "Countries",
+          "explanation" : "The Maldives, composed of numerous low-lying islands, is significantly threatened by sea-level rise and has advocated for stronger climate action.",
+          "date" : 742276848.808879,
+          "question" : "Which island nation is notably vulnerable to the impacts of climate change?",
+          "id" : "1DFFE013-F0CD-4CF1-B04B-54B80C2D150B"
+        },
+        {
+          "id" : "6F18A338-A5EE-4F81-A4E9-03B7DB5D3E67",
+          "aisource" : "gpt-4o",
+          "question" : "Which country has a chocolate heritage dating back over 2,000 years, originating with the Maya and Aztec civilizations?",
+          "answers" : [
+            "Switzerland",
+            "Belgium",
+            "Mexico",
+            "Ecuador"
+          ],
+          "hint" : "This country is known for its ancient civilizations.",
+          "correct" : "Mexico",
+          "explanation" : "Mexico’s chocolate heritage dates back to the Maya and Aztecs.",
+          "topic" : "Countries",
+          "date" : 742276848.809426
+        },
+        {
+          "hint" : "A country in the Pacific Ocean.",
+          "answers" : [
+            "Samoa",
+            "Micronesia",
+            "Palau",
+            "Tonga"
+          ],
+          "question" : "Which island nation comprises over 600 islands scattered over the western Pacific Ocean?",
+          "explanation" : "The Federated States of Micronesia consists of over 600 islands spreading over a large area in the western Pacific Ocean.",
+          "id" : "04F19CF3-F1E1-47DE-BF0D-112AA36EB57F",
+          "topic" : "Countries",
+          "date" : 742276848.809687,
+          "aisource" : "gpt-4o",
+          "correct" : "Micronesia"
+        },
+        {
+          "correct" : "Nauru",
+          "date" : 742276848.810454,
+          "answers" : [
+            "Tuvalu",
+            "Maldives",
+            "Nauru",
+            "Marshall Islands"
+          ],
+          "hint" : "Island in the Pacific Ocean.",
+          "question" : "Which country is the smallest island nation by area and population?",
+          "explanation" : "Nauru is the smallest island nation in the world by both area and population.",
+          "topic" : "Countries",
+          "id" : "2B792EFE-2E4B-4D75-9447-EF95D23FC774",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "question" : "Which country's national symbol is the tulip, despite not being native to it?",
+          "answers" : [
+            "Netherlands",
+            "Turkey",
+            "France",
+            "Iran"
+          ],
+          "id" : "6C6513AC-C966-4F6D-9227-77019A50C383",
+          "date" : 742276848.81105,
+          "hint" : "This country is famous for its windmills and wooden shoes.",
+          "explanation" : "The tulip, a symbol of the Netherlands, actually originates from Turkey.",
+          "aisource" : "gpt-4o",
+          "topic" : "Countries",
+          "correct" : "Netherlands"
+        },
+        {
+          "explanation" : "New Zealand was the first country to grant voting rights to both men and women in 1893.",
+          "hint" : "This country is famous for its indigenous Maori culture.",
+          "correct" : "New Zealand",
+          "answers" : [
+            "Australia",
+            "Canada",
+            "New Zealand",
+            "United Kingdom"
+          ],
+          "aisource" : "gpt-4o",
+          "date" : 742276848.811382,
+          "question" : "Which country was the first to grant suffrage to both men and women (in 1893)?",
+          "id" : "6EDFA7B3-32E9-4CC4-AC02-B5E14BDA431F",
+          "topic" : "Countries"
+        },
+        {
+          "explanation" : "Nigeria, with the largest population in Africa and a significant economy, is often referred to as the 'Giant of Africa.'",
+          "date" : 742276848.811692,
+          "question" : "Which West African country is referred to as the 'Giant of Africa'?",
+          "correct" : "Nigeria",
+          "topic" : "Countries",
+          "answers" : [
+            "Ghana",
+            "Nigeria",
+            "Ivory Coast",
+            "Senegal"
+          ],
+          "id" : "05DF4108-FBCD-4607-A945-A0DE28066842",
+          "aisource" : "gpt-4o",
+          "hint" : "Lagos is a major economic hub."
+        },
+        {
+          "correct" : "Russia",
+          "explanation" : "Norway has a rich Viking history and numerous historical sites related to the Viking Age.",
+          "hint" : "This country is also known for its stunning fjords.",
+          "id" : "2B81B0F3-1216-462D-A043-787FFEFC3BE7",
+          "topic" : "Countries",
+          "answers" : [
+            "Sweden",
+            "Norway",
+            "Russia",
+            "Denmark"
+          ],
+          "question" : "Which country is NOT famous for its Viking heritage?",
+          "date" : 742276848.812153,
+          "aisource" : "gpt-4o"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "id" : "5D6AC0D4-D414-49AD-84FD-D059EED53121",
+          "question" : "Which Caribbean nation is named after a woman?",
+          "answers" : [
+            "Dominica",
+            "Saint Lucia",
+            "Jamaica",
+            "Barbados"
+          ],
+          "explanation" : "Saint Lucia is named after Saint Lucy of Syracuse, making it the only nation named after a female figure.",
+          "topic" : "Countries",
+          "date" : 742276848.813007,
+          "correct" : "Saint Lucia",
+          "hint" : "Its name sounds very similar to 'Saint Lucy.'."
+        },
+        {
+          "topic" : "Countries",
+          "explanation" : "Sweden's capital, Stockholm, is famously built on a series of islands.",
+          "date" : 742276848.815472,
+          "hint" : "Its capital is known for its archipelago and cold temperatures.",
+          "question" : "Which country's capital is built on 14 islands?",
+          "answers" : [
+            "Italy",
+            "Norway",
+            "Sweden",
+            "Denmark"
+          ],
+          "aisource" : "gpt-4o",
+          "id" : "0BA76220-6815-4312-ACB7-393BACA5AB81",
+          "correct" : "Sweden"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "hint" : "It's known for its neutrality.",
+          "correct" : "Switzerland",
+          "id" : "9D2AE13B-2F45-4ED4-9422-36E9233BA387",
+          "question" : "Which European country, famous for its chocolate and banks, has four official languages?",
+          "explanation" : "Switzerland is known for its linguistic diversity, with German, French, Italian, and Romansh as official languages.",
+          "date" : 742277474.445111,
+          "answers" : [
+            "Austria",
+            "Switzerland",
+            "Belgium",
+            "Luxembourg"
+          ],
+          "topic" : "Countries"
+        }
+      ]
+    },
+    {
+      "generated" : 748289872.588805,
+      "topic" : "Food",
+      "id" : "ADFEB767-F913-4F68-AD10-C77D10B08CDF",
+      "challenges" : [
+        {
+          "id" : "0B4B8CB6-CDB1-4669-8C3B-C5A07FB23567",
+          "question" : "What is the distinctive flavor in licorice?",
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 742619935.70901,
+          "topic" : "Food",
+          "explanation" : "",
+          "hint" : ".",
+          "answers" : [
+            "Anise",
+            "Mint",
+            "Vanilla",
+            "Cinnamon"
+          ],
+          "correct" : "Anise"
+        },
+        {
+          "topic" : "Food",
+          "answers" : [
+            "Tomato",
+            "Avocado",
+            "Onion",
+            "Pepper"
+          ],
+          "correct" : "Avocado",
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "5D11DBDA-7EA8-4ABC-96BD-31F5927DB2D4",
+          "question" : "What is the main ingredient in traditional guacamole?",
+          "date" : 742619935.709959,
+          "hint" : "."
+        },
+        {
+          "explanation" : "",
+          "question" : "What kind of meat is used in a traditional Carpaccio?",
+          "correct" : "Beef",
+          "id" : "7A16FBCD-361B-4620-8D80-FC4553685751",
+          "date" : 742619935.711469,
+          "answers" : [
+            "Lamb",
+            "Turkey",
+            "Beef",
+            "Pork"
+          ],
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "topic" : "Food"
+        },
+        {
+          "answers" : [
+            "Beet",
+            "Carrot",
+            "Cabbage",
+            "Onion"
+          ],
+          "question" : "Which vegetable is traditionally pickled to make sauerkraut?",
+          "id" : "12D4FE1C-DC8D-44E9-90CC-6495B34FE329",
+          "correct" : "Cabbage",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "topic" : "Food",
+          "date" : 742619935.71358,
+          "explanation" : ""
+        },
+        {
+          "question" : "What Italian word is used for squid as food?",
+          "date" : 742619935.714078,
+          "id" : "8EFA2CD3-7988-4ECF-A8E1-CB0E953B8EE9",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Pollo",
+            "Manzo",
+            "Calamari",
+            "Verdura"
+          ],
+          "hint" : ".",
+          "topic" : "Food",
+          "explanation" : "",
+          "correct" : "Calamari"
+        },
+        {
+          "hint" : ".",
+          "answers" : [
+            "Lentils",
+            "Chickpeas",
+            "Beans",
+            "Peas"
+          ],
+          "question" : "What is the main ingredient in falafel?",
+          "date" : 742619935.714892,
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Chickpeas",
+          "id" : "4C89F8A3-FBC3-49D3-AF79-3D1D9B89BC5A",
+          "topic" : "Food",
+          "explanation" : ""
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Gin",
+            "Juice",
+            "Espresso",
+            "Tea"
+          ],
+          "id" : "2D473F6F-B2F1-4333-9B59-18FEC9FFD5B1",
+          "hint" : ".",
+          "explanation" : "",
+          "question" : "What is the main ingredient in a latte?",
+          "date" : 742619935.717758,
+          "topic" : "Food",
+          "correct" : "Espresso"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 742619935.71861,
+          "hint" : ".",
+          "explanation" : "",
+          "correct" : "Garlic",
+          "topic" : "Food",
+          "question" : "Which food is known as 'the stinking rose'?",
+          "answers" : [
+            "Garlic",
+            "Onion",
+            "Leek",
+            "Chive"
+          ],
+          "id" : "1BA4359D-B803-4968-95DF-B8CBAF74136C"
+        },
+        {
+          "correct" : "Honey",
+          "id" : "3D05D4C6-7529-438D-A122-E4A2C51FC337",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "explanation" : "",
+          "topic" : "Food",
+          "answers" : [
+            "Maple Syrup",
+            "Honey",
+            "Agave Nectar",
+            "Corn Syrup"
+          ],
+          "date" : 742619935.719513,
+          "question" : "What was the primary source of sugar before sugarcane and beets?"
+        },
+        {
+          "question" : "What tea is known for its smoky flavor?",
+          "explanation" : "",
+          "hint" : ".",
+          "answers" : [
+            "Licorice",
+            "Green Tea",
+            "White Tea",
+            "Lapsang Souchong"
+          ],
+          "correct" : "Lapsang Souchong",
+          "date" : 742619935.72077,
+          "id" : "1D58B72B-D3BC-4F20-8197-08944B77E99B",
+          "topic" : "Food",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "topic" : "Food",
+          "correct" : "Onion",
+          "date" : 742619935.723207,
+          "answers" : [
+            "Celery",
+            "Onion",
+            "Carrot",
+            "Pepper"
+          ],
+          "question" : "Which vegetable is known for making people cry when chopped?",
+          "hint" : ".",
+          "explanation" : "",
+          "id" : "6D55B3FA-6F98-4EE5-A554-427E67A1D356",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "question" : "What fruit is known as Ananas in many languages?",
+          "date" : 742619935.725235,
+          "topic" : "Food",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "explanation" : "",
+          "id" : "8E9429EA-07C0-4BF0-A656-26B58CAD1FFF",
+          "answers" : [
+            "Pineapple",
+            "Banana",
+            "Mango",
+            "Apple"
+          ],
+          "correct" : "Pineapple"
+        },
+        {
+          "id" : "25D6B1A7-332E-4C15-AA04-B52F52B4274D",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "topic" : "Food",
+          "question" : "Which fruit is known for being a natural meat tenderizer?",
+          "correct" : "Pineapple",
+          "date" : 742619935.725509,
+          "answers" : [
+            "Kiwi",
+            "Pineapple",
+            "Papaya",
+            "Fig"
+          ],
+          "explanation" : ""
+        },
+        {
+          "answers" : [
+            "Popcorn",
+            "Pretzels",
+            "Chocolate kisses",
+            "Crackers"
+          ],
+          "explanation" : "",
+          "question" : "What snack food traces its origins to a Native American tribe?",
+          "correct" : "Popcorn",
+          "topic" : "Food",
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 742619935.726576,
+          "hint" : ".",
+          "id" : "7C75F07D-6779-44CA-892C-44E1FC474F62"
+        },
+        {
+          "answers" : [
+            "Pumpkin",
+            "Apple",
+            "Turnip",
+            "Butternut Squash"
+          ],
+          "correct" : "Pumpkin",
+          "id" : "7ADB74E6-1C50-4926-8725-B3CD47195286",
+          "date" : 742619935.727298,
+          "question" : "Which food is traditionally carved and lit up for Halloween?",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "topic" : "Food",
+          "hint" : "."
+        },
+        {
+          "topic" : "Food",
+          "explanation" : "",
+          "correct" : "Strawberry",
+          "question" : "Which fruit has its seeds on the outside?",
+          "id" : "6C4AEE7E-D0FE-4A9C-AF1F-4EEDA5D03B4E",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Kiwi",
+            "Strawberry",
+            "Banana",
+            "Peach"
+          ],
+          "date" : 742619935.730082,
+          "hint" : "."
+        },
+        {
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "Which nut is known for its high omega-3 fatty acids content?",
+          "correct" : "Walnut",
+          "explanation" : "",
+          "answers" : [
+            "Peanut",
+            "Cashew",
+            "Walnut",
+            "Almond"
+          ],
+          "id" : "8EF0EC3B-CB1D-4ABC-9499-F3C937F5647B",
+          "date" : 742619935.731813,
+          "topic" : "Food"
+        },
+        {
+          "answers" : [
+            "Wasabi",
+            "Ginger",
+            "Soy Sauce",
+            "Seaweed"
+          ],
+          "topic" : "Food",
+          "id" : "2B2C8AAB-AB56-4A62-B0B1-7F57A1D9B5B0",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "correct" : "Wasabi",
+          "date" : 742619935.732062,
+          "explanation" : "",
+          "question" : "What food is also known as Japanese horseradish?"
+        },
+        {
+          "hint" : ".",
+          "question" : "What is not an ingredient in béchamel sauce?",
+          "topic" : "Food",
+          "date" : 742619935.73267,
+          "answers" : [
+            "Milk",
+            "Flour",
+            "Butter",
+            "Wine"
+          ],
+          "correct" : "WIne",
+          "id" : "0F48BF2C-3676-46F8-97AD-CF78F56F10C1",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : ""
+        },
+        {
+          "explanation" : "",
+          "question" : "What vegetable is also known as courgette?",
+          "correct" : "Zucchini",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Eggplant",
+            "Cucumber",
+            "Zucchini",
+            "Squash"
+          ],
+          "id" : "7AFA0A2A-4BA8-4239-A129-5A87E4525941",
+          "topic" : "Food",
+          "date" : 742619935.733229
+        }
+      ],
+      "pic" : "leaf"
+    },
+    {
+      "challenges" : [
+        {
+          "topic" : "Golden Age of Movies",
+          "correct" : "Casablanca",
+          "date" : 744838040.466054,
+          "id" : "53EEEACE-1010-46D5-B190-0B6858862394",
+          "question" : "In what 1942 classic do Bogart and Bergman share a past in Paris?",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "explanation" : "",
+          "answers" : [
+            "The Maltese Falcon",
+            "Key Largo",
+            "Casablanca",
+            "To Have and Have Not"
+          ]
+        },
+        {
+          "hint" : ".",
+          "date" : 744838040.466423,
+          "id" : "1BE92E89-F645-4553-A683-43AF097D9A1B",
+          "correct" : "Citizen Kane",
+          "topic" : "Golden Age of Movies",
+          "question" : "In what film does ‘rosebud’ refer to  a sled?",
+          "answers" : [
+            "The Maltese Falcon",
+            "Citizen Kane",
+            "Sergeant York",
+            "How Green Was My Valley"
+          ],
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "hint" : ".",
+          "date" : 744838040.467568,
+          "question" : "Who is the iconic dance partner of Ginger Rogers in the 1930s?",
+          "explanation" : "",
+          "answers" : [
+            "Fred Astaire",
+            "Gene Kelly",
+            "James Cagney",
+            "Buster Keaton"
+          ],
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "6BC9654A-6501-40D2-97E8-B79503EE1364",
+          "topic" : "Golden Age of Movies",
+          "correct" : "Fred Astaire"
+        },
+        {
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "Who starred as Norma Desmond in 1950's ‘Sunset Boulevard’?",
+          "correct" : "Gloria Swanson",
+          "date" : 744838040.467766,
+          "explanation" : "",
+          "answers" : [
+            "Betty Davis",
+            "Marilyn Monroe",
+            "Gloria Swanson",
+            "Joan Crawford"
+          ],
+          "id" : "89C228FC-8F78-4325-8656-D4CB6634949A",
+          "topic" : "Golden Age of Movies"
+        },
+        {
+          "correct" : "It Happened One Night",
+          "answers" : [
+            "It Happened One Night",
+            "Cleopatra",
+            "The Palm Beach Story",
+            "Midnight"
+          ],
+          "id" : "73A199AE-EC04-4BFF-B645-C3C31FA2A575",
+          "question" : "Name the 1934 film where Claudette Colbert shows her leg to hitch a ride.",
+          "explanation" : "",
+          "date" : 744838040.468145,
+          "topic" : "Golden Age of Movies",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "answers" : [
+            "James Dean",
+            "Marlon Brando",
+            "Paul Newman",
+            "Montgomery Clift"
+          ],
+          "question" : "Who stars as an alienated teen in 1955's 'Rebel Without a Cause'?",
+          "id" : "95E9B702-6E96-4B94-B3DE-81B6C4C2E1AE",
+          "hint" : ".",
+          "correct" : "James Dean",
+          "date" : 744838040.468543,
+          "topic" : "Golden Age of Movies",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : ""
+        },
+        {
+          "id" : "6F23251F-D264-4CF6-B728-6550E91584FE",
+          "topic" : "Golden Age of Movies",
+          "question" : "Who co-starred with Humphrey Bogart in 'African Queen'?",
+          "explanation" : "",
+          "hint" : ".",
+          "answers" : [
+            "Lauren Bacall",
+            "Ingrid Bergman",
+            "Katharine Hepburn",
+            "Ava Gardner"
+          ],
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 744838040.468888,
+          "correct" : "Katharine Hepburn"
+        },
+        {
+          "correct" : "Miracle on 34th Street",
+          "date" : 744838040.469465,
+          "id" : "0EFAC0CE-279F-474B-95B5-0D2D241B0D50",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Golden Age of Movies",
+          "answers" : [
+            "Miracle on 34th Street",
+            "It’s a Wonderful Life",
+            "Meet John Doe",
+            "The Bishop’s Wife"
+          ],
+          "question" : "Which 1947 film features a lawyer defending Santa Claus?",
+          "hint" : ".",
+          "explanation" : ""
+        },
+        {
+          "correct" : "Some Like It Hot",
+          "hint" : ".",
+          "topic" : "Golden Age of Movies",
+          "id" : "2DD7E00A-2148-4EFB-90AF-B4FAB58E6443",
+          "question" : "Name the 1959 comedy that features Tony Curtis and Jack Lemmon in drag.",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "answers" : [
+            "The Apartment",
+            "Some Like It Hot",
+            "The Great Race",
+            "Operation Petticoat"
+          ],
+          "date" : 744838040.47116
+        },
+        {
+          "date" : 744838040.473213,
+          "question" : "What movie was the song 'White Christmas’ written for?",
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Holiday Inn",
+          "topic" : "Golden Age of Movies",
+          "answers" : [
+            "Going My Way",
+            "Holiday Inn",
+            "Meet Me in St. Louis",
+            "Yankee Doodle Dandy"
+          ],
+          "hint" : ".",
+          "id" : "30ECC49D-8DF5-476B-930B-50C4ADAA23AE"
+        },
+        {
+          "question" : "What is the name of the high school in 1955's Blackboard Jungle?",
+          "id" : "5AFBE4A3-9039-4B39-9273-164401D3714C",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Golden Age of Movies",
+          "explanation" : "",
+          "correct" : "North Manual Trades High",
+          "answers" : [
+            "Ridgemont High",
+            "Riverdale High",
+            "North Manual Trades High",
+            "Hill Valley High"
+          ],
+          "date" : 744838040.473926
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "The Robe",
+            "Ben-Hur",
+            "The Ten Commandments",
+            "Spartacus"
+          ],
+          "hint" : ".",
+          "topic" : "Golden Age of Movies",
+          "correct" : "The Robe",
+          "explanation" : "",
+          "question" : "What film introduced CinemaScope?",
+          "id" : "51A7FEE3-A376-447A-9931-65BAD2710E16",
+          "date" : 744838040.474725
+        },
+        {
+          "question" : "In which 1958 film does Orson Welles play a corrupt police captain in Mexico?",
+          "correct" : "Touch of Evil",
+          "answers" : [
+            "The Third Man",
+            "Touch of Evil",
+            "The Lady from Shanghai",
+            "Citizen Kane"
+          ],
+          "id" : "7EC698C3-C5A8-409A-B0CC-92EC66F198AA",
+          "date" : 744838040.475208,
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Golden Age of Movies",
+          "hint" : "."
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "question" : "Which movie won the first-ever Best Picture Oscar?",
+          "answers" : [
+            "Sunrise",
+            "Wings",
+            "The Last Command",
+            "Moulin Rouge"
+          ],
+          "correct" : "Wings",
+          "hint" : ".",
+          "topic" : "Golden Age of Movies",
+          "id" : "9BB8AF54-CC17-48FE-A5D1-BCBE665431E4",
+          "date" : 744838040.475743
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "Who directed 'The Maltese Falcon' in 1941?",
+          "explanation" : "",
+          "correct" : "John Huston",
+          "hint" : ".",
+          "id" : "72E89D83-5F12-4C7E-8CF6-3624B422F329",
+          "date" : 744838040.477284,
+          "answers" : [
+            "John Huston",
+            "Howard Hawks",
+            "Alfred Hitchcock",
+            "Orson Welles"
+          ],
+          "topic" : "Golden Age of Movies"
+        },
+        {
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Howard Hawks",
+            "Frank Capra",
+            "Alfred Hitchcock",
+            "Orson Welles"
+          ],
+          "topic" : "Golden Age of Movies",
+          "id" : "5A31853F-9E3F-4C52-ACA6-67AD5B03C3CE",
+          "question" : "Who directed ‘You Can’t Take It with You’ 1938?",
+          "hint" : ".",
+          "correct" : "Frank Capra",
+          "date" : 744838040.478916
+        },
+        {
+          "hint" : ".",
+          "answers" : [
+            "Leave Her to Heaven",
+            "Heaven on the Beach",
+            "The Ghost and Mrs. Muir",
+            "Heaven Can Wait"
+          ],
+          "id" : "89FF51E7-F440-41F5-AB0E-4FDA926C5376",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Leave Her to Heaven",
+          "topic" : "Golden Age of Movies",
+          "date" : 744838040.480048,
+          "explanation" : "",
+          "question" : "Which 1945 film features Gene Tierney as a hauntingly beautiful woman?"
+        },
+        {
+          "id" : "1A82B56D-48DB-4FE0-916B-D82CFE69C2D8",
+          "hint" : ".",
+          "question" : "What 1937 Disney film was his first full-length animated feature?",
+          "topic" : "Golden Age of Movies",
+          "correct" : "Snow White and the Seven Dwarfs",
+          "explanation" : "",
+          "date" : 744838040.480815,
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Cinderella",
+            "Snow White and the Seven Dwarfs",
+            "Sleeping Beauty",
+            "Pinocchio"
+          ]
+        },
+        {
+          "date" : 744838040.481165,
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "answers" : [
+            "The Great Escape",
+            "Bridge on the River Kwai",
+            "The Dirty Dozen",
+            "Stalag 17"
+          ],
+          "topic" : "Golden Age of Movies",
+          "id" : "80CA3905-ACBF-4A45-B5D9-78D88A1DD00B",
+          "correct" : "Stalag 17",
+          "explanation" : "",
+          "question" : "What 1953 war film starring William Holden is set in a WWII German POW camp?"
+        },
+        {
+          "explanation" : "",
+          "date" : 744838040.482238,
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "The knight",
+            "The queen",
+            "The king",
+            "The bishop"
+          ],
+          "topic" : "Golden Age of Movies",
+          "id" : "7D85CEB6-CE4A-4DE4-B79D-3E0A0AF017A1",
+          "correct" : "The knight",
+          "question" : "What is the pivotal chess piece in 1957's 'The Seventh Seal'?"
+        }
+      ],
+      "pic" : "leaf",
+      "id" : "C1C473F3-C31E-4568-BD2F-E3C4C9114986",
+      "topic" : "Golden Age of Movies",
+      "generated" : 748289872.588841
+    },
+    {
+      "topic" : "James Bond Films",
+      "id" : "97E536ED-3530-450C-8169-432225B56492",
+      "challenges" : [
+        {
+          "correct" : "Bathosub",
+          "id" : "02EC1DB5-A0D1-4F0F-B640-F28ADF29C2A3",
+          "aisource" : "gpt-4o",
+          "topic" : "James Bond Films",
+          "answers" : [
+            "Aqua Avenger",
+            "Submarine Speeder",
+            "Submarine Jet",
+            "Bathosub"
+          ],
+          "date" : 743112312.303715,
+          "hint" : "Sounds like you might use it for something else.",
+          "question" : "What underwater vehicle is featured in 'Thunderball'?",
+          "explanation" : "In 'Thunderball', Bond uses a vehicle referred to as a bathosub."
+        },
+        {
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "DB5",
+            "DB9",
+            "Vantage",
+            "Vanquish"
+          ],
+          "correct" : "DB5",
+          "explanation" : "The Aston Martin DB5 is the iconic car driven by James Bond.",
+          "hint" : "It was featured on a British Auto Legends postage stamp issued by the Royal Mail.",
+          "topic" : "James Bond Films",
+          "date" : 743112312.304853,
+          "question" : "What model is the iconic James Bond Aston Martin?",
+          "id" : "7A0502F3-C9C9-47E9-8ABA-B2B11F55A07B"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "date" : 743112312.305018,
+          "hint" : "Think hex.",
+          "question" : "Name the Bond film that introduced Halle Berry as a Bond girl.",
+          "explanation" : "Halle Berry was introduced as a Bond girl in 'Die Another Day' released in 2002.",
+          "correct" : "Die Another Day",
+          "topic" : "James Bond Films",
+          "answers" : [
+            "Die Another Day",
+            "GoldenEye",
+            "The World Is Not Enough",
+            "Tomorrow Never Dies"
+          ],
+          "id" : "4AA0657A-33B2-4606-B955-3E748C76BAAD"
+        },
+        {
+          "answers" : [
+            "Le Chiffre",
+            "Auric Goldfinger",
+            "Francisco Scaramanga",
+            "Dr. Kananga"
+          ],
+          "explanation" : "The main villain in 'Live and Let Die' is Dr. Kananga, also known as Mr. Big.",
+          "aisource" : "gpt-4o",
+          "correct" : "Dr. Kananga",
+          "hint" : "Large.",
+          "date" : 743112312.305689,
+          "topic" : "James Bond Films",
+          "id" : "1EEF362A-1582-4FF3-9012-A5CCA4913563",
+          "question" : "Who is the main villain in 'Live and Let Die'?"
+        },
+        {
+          "id" : "0E65AE1E-0D8E-4EB6-A599-9E74BEBDDC28",
+          "topic" : "James Bond Films",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Dr. No",
+            "Goldfinger",
+            "Thunderball",
+            "From Russia with Love"
+          ],
+          "explanation" : "'Dr. No' is the first James Bond film, released in 1962.",
+          "question" : "What is the title of the first James Bond film?",
+          "date" : 743112312.305849,
+          "hint" : "The villain's name is in the title.",
+          "correct" : "Dr. No"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "hint" : "Shares his first name with a famous cat.",
+          "topic" : "James Bond Films",
+          "explanation" : "Felix Leiter is Bond's CIA ally throughout many films.",
+          "answers" : [
+            "Felix Leiter",
+            "Bill Tanner",
+            "Marc Ange Draco",
+            "Kerim Bey"
+          ],
+          "question" : "What's the name of Bond's CIA friend?",
+          "correct" : "Felix Leiter",
+          "date" : 743112312.306774,
+          "id" : "0BB86807-23AA-49CD-8DDF-F7313397B565"
+        },
+        {
+          "topic" : "James Bond Films",
+          "answers" : [
+            "Live and Let Die",
+            "A View to a Kill",
+            "Octopussy",
+            "License to Kill"
+          ],
+          "id" : "3EFA4012-E7A7-4805-8F5A-D235688D55F9",
+          "date" : 743112312.311841,
+          "question" : "What's the first Bond film to star Roger Moore?",
+          "correct" : "Live and Let Die",
+          "hint" : "Shares its name with a famous song.",
+          "aisource" : "gpt-4o",
+          "explanation" : "Roger Moore's first appearance as Bond was in 'Live and Let Die' (1973)."
+        },
+        {
+          "answers" : [
+            "Dr. No",
+            "Moonraker",
+            "Live and Let Die",
+            "The Living Daylights"
+          ],
+          "id" : "2D676CA5-B6F8-4B34-A872-8A8F30B94B1F",
+          "date" : 743112312.312694,
+          "explanation" : "Bond uses a gondola in 'Moonraker' (1979).",
+          "aisource" : "gpt-4o",
+          "correct" : "Moonraker",
+          "question" : "Which film shows Bond commandeering a gondola in Venice?",
+          "topic" : "James Bond Films",
+          "hint" : "Also features a space station."
+        },
+        {
+          "id" : "0C6335DD-2E37-4197-A380-F33DC23AFE6E",
+          "explanation" : "In 'Octopussy', Bond uses a fake crocodile to infiltrate a stronghold.",
+          "hint" : "This film features a title character who leads a female-operated circus.",
+          "topic" : "James Bond Films",
+          "answers" : [
+            "Live and Let Die",
+            "Octopussy",
+            "Moonraker",
+            "For Your Eyes Only"
+          ],
+          "date" : 743112312.313268,
+          "question" : "In which film does Bond infiltrate a drug lord's base disguised as a crocodile?",
+          "correct" : "Octopussy",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "answers" : [
+            "Poker",
+            "Baccarat",
+            "Blackjack",
+            "Roulette"
+          ],
+          "correct" : "Poker",
+          "explanation" : "James Bond plays poker against Le Chiffre in the film 'Casino Royale' (2006).",
+          "aisource" : "gpt-4o",
+          "question" : "What game does Bond play against Le Chiffre in 'Casino Royale’ (2006)?",
+          "id" : "7B52FE14-EFD5-4644-B179-3A9A219A13E2",
+          "date" : 743112312.314091,
+          "hint" : "A game with many versions.",
+          "topic" : "James Bond Films"
+        },
+        {
+          "question" : "Who is MI6's quartermaster?",
+          "explanation" : "In the Bond series, MI6's quartermaster is known as Q.",
+          "date" : 743112312.314368,
+          "aisource" : "gpt-4o",
+          "id" : "3F46D217-3434-45FD-BE88-106B1D7A0390",
+          "answers" : [
+            "Moneypenny",
+            "M",
+            "Q",
+            "R"
+          ],
+          "topic" : "James Bond Films",
+          "correct" : "Q",
+          "hint" : "This character is in charge of gadgets and technology."
+        },
+        {
+          "id" : "02F5778F-6495-4A16-B0C4-0BC5A1AA3A54",
+          "answers" : [
+            "Spectre",
+            "Quantum of Solace",
+            "Skyfall",
+            "Moonraker"
+          ],
+          "explanation" : "'Quantum of Solace' features a plot involving Dominic Greene's scheme to control Bolivia's water supply.",
+          "question" : "Which Bond film involves stolen water from Bolivia?",
+          "hint" : "This is the direct sequel to 'Casino Royale'.",
+          "date" : 743112312.3145,
+          "correct" : "Quantum of Solace",
+          "aisource" : "gpt-4o",
+          "topic" : "James Bond Films"
+        },
+        {
+          "topic" : "James Bond Films",
+          "explanation" : "Sheryl Crow performed the theme song for 'Tomorrow Never Dies' (1997).",
+          "id" : "8A34CFFB-E8E8-4599-ABE7-3C1D20F4FC58",
+          "date" : 743112312.315803,
+          "correct" : "Sheryl Crow",
+          "question" : "Who wrote the theme song for 'Tomorrow Never Dies'?",
+          "hint" : "Also known for the song 'If It Makes You Happy.'.",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Sheryl Crow",
+            "Billie Eilish",
+            "Sam Smith",
+            "Carly Simon"
+          ]
+        },
+        {
+          "aisource" : "gpt-4o",
+          "hint" : "It was released in 2012.",
+          "question" : "In which Bond movie starring Daniel Craig does 007 fight atop a moving train?",
+          "explanation" : "The opening scene of 'Skyfall' features Bond fighting on top of a moving train.",
+          "answers" : [
+            "Skyfall",
+            "Goldfinger",
+            "Diamonds Are Forever",
+            "Octopussy"
+          ],
+          "date" : 743112312.316344,
+          "correct" : "Skyfall",
+          "topic" : "James Bond Films",
+          "id" : "8AAAF9C1-70E7-46BE-91AB-326D9E209C69"
+        },
+        {
+          "date" : 743112312.316655,
+          "aisource" : "gpt-4o",
+          "explanation" : "SPECTRE is a recurring terrorist organization in the James Bond series.",
+          "id" : "2A005A11-DBE7-4CA0-8BCC-24E7F60F3324",
+          "hint" : "The name is an acronym.",
+          "question" : "Name the fictional terrorist organization frequently opposing Bond.",
+          "topic" : "James Bond Films",
+          "answers" : [
+            "SPECTRE",
+            "THRUSH",
+            "BESMERCH",
+            "HYDRA"
+          ],
+          "correct" : "SPECTRE"
+        },
+        {
+          "question" : "What's the weapon of choice for Oddjob?",
+          "correct" : "Steel-Rimmed Bowler Hat",
+          "id" : "2DD96E4E-07BE-4E0C-838F-31C02A9054F4",
+          "explanation" : "Oddjob, from 'Goldfinger', uses a steel-rimmed bowler hat as his weapon.",
+          "topic" : "James Bond Films",
+          "date" : 743112312.316991,
+          "aisource" : "gpt-4o",
+          "hint" : "Iconic.",
+          "answers" : [
+            "Asp",
+            "Tarantula",
+            "Steel-Rimmed Bowler Hat",
+            "Poison Dart Pen"
+          ]
+        },
+        {
+          "topic" : "James Bond Films",
+          "question" : "In which film does Bond drive a submarine car?",
+          "correct" : "The Spy Who Loved Me",
+          "id" : "04F5F19C-5D91-4579-8F3E-58425EF87C19",
+          "explanation" : "Bond drives a submarine car in 'The Spy Who Loved Me' released in 1977.",
+          "hint" : "The title suggests a romantic interest.",
+          "aisource" : "gpt-4o",
+          "date" : 743112312.317635,
+          "answers" : [
+            "The Spy Who Loved Me",
+            "Casino Royale",
+            "Skyfall",
+            "Tomorrow Never Dies"
+          ]
+        },
+        {
+          "date" : 743112312.317913,
+          "aisource" : "gpt-4o",
+          "question" : "Which Bond movie features a fight in a glass factory?",
+          "topic" : "James Bond Films",
+          "id" : "6BA55A94-71AC-4617-9031-AE1F2C883E33",
+          "explanation" : "'Spectre' features an intense fight scene inside a glass-enclosed facility.",
+          "hint" : "Pierce Brosnan stars as Bond.",
+          "answers" : [
+            "The Living Daylights",
+            "The World is Not Enough",
+            "Diamonds Are Forever",
+            "The Man with the Golden Gun"
+          ],
+          "correct" : "The World is Not Enough"
+        },
+        {
+          "answers" : [
+            "Diamonds Are Forever",
+            "Goldfinger",
+            "Thunderball",
+            "Live and Let Die"
+          ],
+          "id" : "7D6D58F6-93BC-4BF0-9201-ECC40F009D8F",
+          "aisource" : "gpt-4o",
+          "topic" : "James Bond Films",
+          "question" : "In which Bond film does Bond use a jet pack?",
+          "date" : 743112312.318073,
+          "correct" : "Thunderball",
+          "explanation" : "Bond uses a jet pack in the pre-title sequence of 'Thunderball'.",
+          "hint" : "This film was released in 1965."
+        },
+        {
+          "explanation" : "James Bond is known for ordering a Vodka Martini, 'shaken, not stirred.'",
+          "topic" : "James Bond Films",
+          "date" : 743112312.31958,
+          "id" : "2A779CA3-DA0B-4163-A609-C960C17000DB",
+          "correct" : "Vodka Martini",
+          "question" : "What is Bond’s signature drink?",
+          "hint" : "Shaken, not stirred...",
+          "answers" : [
+            "Vesper Martini",
+            "Old Fashioned",
+            "Vodka Martini",
+            "Gin and Tonic"
+          ],
+          "aisource" : "gpt-4o"
+        }
+      ],
+      "pic" : "leaf",
+      "generated" : 748289872.588877
+    },
+    {
+      "generated" : 748289872.588915,
+      "id" : "FD36F642-3C45-40C8-BA30-BF74043AFA01",
+      "pic" : "leaf",
+      "topic" : "Moderately Easy Math",
+      "challenges" : [
+        {
+          "date" : 743397788.297218,
+          "explanation" : "0.85 multiplied by 100 gives 85%.",
+          "question" : "Turn 0.85 into a percentage.",
+          "topic" : "Moderately Easy Math",
+          "correct" : "85%",
+          "answers" : [
+            "85%",
+            "80%",
+            "90%",
+            "75%"
+          ],
+          "hint" : "Multiply by 100.",
+          "id" : "1DE6F2D7-10ED-4BC7-BA45-FB5EB8B00491",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "2D3F4113-A1C8-447A-98AF-C11B5613E4E7",
+          "hint" : ".",
+          "explanation" : "",
+          "correct" : "4",
+          "answers" : [
+            "4",
+            "7",
+            "2",
+            "4"
+          ],
+          "question" : "What is the median of the set 4, 1, 7, 9, and 2?",
+          "topic" : "Moderately Easy Math",
+          "date" : 743397788.298822
+        },
+        {
+          "answers" : [
+            "$4.00",
+            "$2.00",
+            "$6.00",
+            "$5.00"
+          ],
+          "hint" : "Proportionality.",
+          "id" : "2BA9D128-4609-4410-A813-BF7CD564483E",
+          "date" : 743397788.29929,
+          "aisource" : "gpt-4o",
+          "explanation" : "If 2 apples cost $1, then 8 apples cost $4.",
+          "topic" : "Moderately Easy Math",
+          "correct" : "$4.00",
+          "question" : "If 2 apples cost $1, how much do 8 apples cost?"
+        },
+        {
+          "answers" : [
+            "15",
+            "5",
+            "7",
+            "3x = 15"
+          ],
+          "correct" : "5",
+          "hint" : ".",
+          "explanation" : "",
+          "question" : "Solve for x: 3x + 5 = 20.",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Moderately Easy Math",
+          "date" : 743397788.299619,
+          "id" : "03ACE524-84D4-4F18-9314-FC0F584D5B51"
+        },
+        {
+          "explanation" : "Adding 8 to both sides gives 4x = 24. Dividing by 4 gives x = 6.",
+          "question" : "Solve for x in the equation: 4x - 8 = 16.",
+          "correct" : "6",
+          "answers" : [
+            "2",
+            "6",
+            "8",
+            "4"
+          ],
+          "id" : "4DF77FE6-8D0E-4B40-AC36-0934E9D48629",
+          "aisource" : "gpt-4o",
+          "date" : 743397788.300173,
+          "topic" : "Moderately Easy Math",
+          "hint" : "Add 8 to both sides and then divide by 4."
+        },
+        {
+          "date" : 743397788.300764,
+          "aisource" : "gpt-4o",
+          "question" : "If a meal costs $35 and you want to leave a 20% tip, how much is the tip?",
+          "topic" : "Moderately Easy Math",
+          "correct" : "$7.00",
+          "answers" : [
+            "$7.00",
+            "$8.00",
+            "$6.00",
+            "$10.00"
+          ],
+          "explanation" : "20% of a $35 meal is calculated as $35 * 0.20 = $7.",
+          "hint" : "20% is the same as dividing by 5.",
+          "id" : "3DB4A190-8A7F-4683-9F47-32502B21C6C5"
+        },
+        {
+          "answers" : [
+            "9",
+            "8",
+            "7",
+            "10"
+          ],
+          "topic" : "Moderately Easy Math",
+          "hint" : ".",
+          "explanation" : "",
+          "id" : "1CD476FF-F829-46A5-8A15-69079174EABC",
+          "question" : "What is the square root of 81?",
+          "date" : 743397788.30158,
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "9"
+        },
+        {
+          "topic" : "Moderately Easy Math",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "7",
+            "9",
+            "8",
+            "10"
+          ],
+          "explanation" : "The solution to 9x = 81 is x = 81 \/ 9, which is 9.",
+          "question" : "What is the solution to the equation 9x = 81?",
+          "id" : "4D073F88-436D-4470-9753-759B62C53FCE",
+          "date" : 743397788.301722,
+          "hint" : "Divide both sides by 9.",
+          "correct" : "9"
+        },
+        {
+          "date" : 743397788.307779,
+          "explanation" : "25 multiplied by 2\/5 equals 10, because 25 * 2\/5 = 50\/5 = 10.",
+          "topic" : "Moderately Easy Math",
+          "id" : "7B9D2DC1-6AC3-4F36-BE1A-CFBA59CD942F",
+          "answers" : [
+            "15",
+            "8",
+            "10",
+            "12"
+          ],
+          "hint" : "Reduce fractions.",
+          "question" : "If you multiply 25 by 2\/5, what do you get?",
+          "aisource" : "gpt-4o",
+          "correct" : "10"
+        },
+        {
+          "id" : "5F3970BD-F06B-4B17-9067-F68D655B40D5",
+          "correct" : "23",
+          "hint" : "First, multiply 4 times 5...",
+          "question" : "If y = 5, then what is the value of 4y + 3?",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "20",
+            "23",
+            "25",
+            "22"
+          ],
+          "date" : 743397788.309774,
+          "explanation" : "Substitute 5 into the equation: 4*5 + 3 equals 23.",
+          "topic" : "Moderately Easy Math"
+        },
+        {
+          "correct" : "65",
+          "hint" : "Think of 81 as 9² and 16 as 4².",
+          "id" : "0D2B7D0B-2E23-4677-A3F6-23F855613149",
+          "date" : 743397788.311372,
+          "topic" : "Moderately Easy Math",
+          "aisource" : "gpt-4o",
+          "question" : "Subtract: 81 - 16",
+          "answers" : [
+            "65",
+            "81",
+            "25",
+            "15"
+          ],
+          "explanation" : "81 minus 16 is 65."
+        },
+        {
+          "correct" : "90",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "90",
+            "45",
+            "60",
+            "30"
+          ],
+          "explanation" : "A right angle is defined as 90 degrees.",
+          "question" : "How many degrees are in a right angle?",
+          "hint" : "A right angle forms an L shape.",
+          "topic" : "Moderately Easy Math",
+          "id" : "0FEAC0B4-5D75-401D-95AB-AE443A68B89D",
+          "date" : 743397788.311683
+        },
+        {
+          "answers" : [
+            "1\/2",
+            "1\/4",
+            "3\/4",
+            "2\/3"
+          ],
+          "date" : 743397788.313746,
+          "id" : "2D4BA022-4698-49C6-A614-99287D8463C0",
+          "explanation" : "",
+          "hint" : ".",
+          "question" : "What is the probability of a flipped fair coin landing on heads?",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Moderately Easy Math",
+          "correct" : "1\/2"
+        },
+        {
+          "hint" : "A die has six faces.",
+          "question" : "What are the chances of rolling a six on a standard die?",
+          "aisource" : "gpt-4o",
+          "topic" : "Moderately Easy Math",
+          "correct" : "1\/6",
+          "date" : 743397788.314295,
+          "id" : "5A2D5B85-1FC0-4775-90B0-F1C667136F54",
+          "answers" : [
+            "1\/6",
+            "1\/5",
+            "1\/4",
+            "1\/3"
+          ],
+          "explanation" : "The probability of rolling a six is 1 out of 6 possible outcomes."
+        },
+        {
+          "explanation" : "The perimeter of the rectangle is 2 * (7 + 3) = 20 cm.",
+          "topic" : "Moderately Easy Math",
+          "question" : "Calculate the perimeter of a rectangle that is 7 cm long and 3 cm wide.",
+          "aisource" : "gpt-4o",
+          "date" : 743397788.31508,
+          "answers" : [
+            "14 cm",
+            "16 cm",
+            "18 cm",
+            "20 cm"
+          ],
+          "id" : "4C5B7E0A-B536-4421-B627-216ABB8AC41E",
+          "correct" : "20 cm",
+          "hint" : "Add up all the sides."
+        },
+        {
+          "explanation" : "To find the number of cats: (cats\/dogs) = 3\/4. Therefore, (cats\/21) = 3\/4, which gives us cats = (3 * 21) \/ 4 = 15.75. Thus, the closest integer is 16 cats.",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "12 dogs",
+            "18 dogs",
+            "21 dogs",
+            "28 dogs"
+          ],
+          "question" : "The ratio of cats to dogs is 3 to 4. If there are 21 cats, how many dogs are there?",
+          "id" : "6B5A0E80-A267-48F9-AA76-D0C48E591953",
+          "correct" : "28 dogs",
+          "hint" : "Proportions and ratios.",
+          "topic" : "Moderately Easy Math",
+          "date" : 743397788.315744
+        },
+        {
+          "aisource" : "gpt-4o",
+          "correct" : "5\/6",
+          "hint" : "Invert and multiply.",
+          "explanation" : "2\/3 ÷ 4\/5 = 2\/3 * 5\/4 = 10\/12 = 5\/6.",
+          "date" : 743397788.316814,
+          "answers" : [
+            "5\/6",
+            "8\/15",
+            "3\/4",
+            "1\/2"
+          ],
+          "question" : "Divide: 2\/3 ÷ 4\/5.",
+          "id" : "4BF67908-DAF7-4956-8CF7-E4F7BA54A8BA",
+          "topic" : "Moderately Easy Math"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "hint" : "Use the formula speed = distance\/time.",
+          "correct" : "80 mph",
+          "answers" : [
+            "60 mph",
+            "80 mph",
+            "100 mph",
+            "120 mph"
+          ],
+          "question" : "If a train travels 240 miles in 3 hours, at what average speed does the train travel?",
+          "id" : "2CE8D17B-AA4E-4942-8FBD-2E96F5EB3A8B",
+          "topic" : "Moderately Easy Math",
+          "date" : 743397788.317433,
+          "explanation" : "The average speed is 240 miles \/ 3 hours = 80 mph."
+        },
+        {
+          "id" : "5DB4E73A-A09C-4B4D-8F47-AA5E2DC6C548",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "x = 2",
+            "x = 3",
+            "x = 4",
+            "x = 5"
+          ],
+          "explanation" : "Distributing gives 6x - 8 = 10. Adding 8 to both sides gives 6x = 18, so x = 3.",
+          "question" : "Solve: 2(3x – 4) = 10.",
+          "hint" : "First, distribute the 2...",
+          "date" : 743397788.317846,
+          "correct" : "x = 3",
+          "topic" : "Moderately Easy Math"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "date" : 743398302.442026,
+          "correct" : "5",
+          "question" : "Solve for x: 2x - 3 = 7.",
+          "topic" : "Moderately Easy Math",
+          "answers" : [
+            "20",
+            "5",
+            "2",
+            "10"
+          ],
+          "explanation" : "2x - 3 = 7; 2x = 10; x = 5.",
+          "hint" : "Add 3 to both sides and then divide by 2.",
+          "id" : "01B5B41A-EACF-400B-8A10-855166828736"
+        }
+      ]
+    },
+    {
+      "challenges" : [
+        {
+          "correct" : "Mercury",
+          "explanation" : "",
+          "hint" : ".",
+          "date" : 736906873.552388,
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Mercury",
+            "Venus",
+            "Earth",
+            "Mars"
+          ],
+          "question" : "What is the closest planet to the Sun?",
+          "id" : "0A8041FE-49E0-41AA-B1C7-4F24DC2C329A",
+          "topic" : "Outer Space"
+        },
+        {
+          "correct" : "Milky Way",
+          "answers" : [
+            "Andromeda",
+            "Milky Way",
+            "Whirlpool",
+            "Triangulum"
+          ],
+          "id" : "4A579604-508A-4A4E-AE98-2ADB62E75D16",
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 736906873.552403,
+          "question" : "What is the name of the galaxy we live in?",
+          "hint" : ".",
+          "explanation" : "",
+          "topic" : "Outer Space"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "Which planet is famous for its rings?",
+          "topic" : "Outer Space",
+          "id" : "3F943EE3-FE84-4D52-9038-2245DB38B247",
+          "date" : 736906873.552405,
+          "answers" : [
+            "Uranus",
+            "Neptune",
+            "Saturn",
+            "Jupiter"
+          ],
+          "correct" : "Saturn",
+          "explanation" : "",
+          "hint" : "."
+        },
+        {
+          "answers" : [
+            "Lunar Eclipse",
+            "Solar Eclipse",
+            "Comet Passing",
+            "Meteor Shower"
+          ],
+          "explanation" : "",
+          "id" : "2F8EE512-1F15-4559-BE1D-614159B6BD51",
+          "correct" : "Solar Eclipse",
+          "topic" : "Outer Space",
+          "hint" : ".",
+          "question" : "What celestial event occurs when the moon passes between the Earth and the Sun?",
+          "date" : 736975571.544114,
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "date" : 736975571.544126,
+          "question" : "What term describes a year on Jupiter?",
+          "hint" : ".",
+          "explanation" : "",
+          "correct" : "Jovian Year",
+          "topic" : "Outer Space",
+          "answers" : [
+            "Jovian Day",
+            "Jovian Cycle",
+            "Jovian Year",
+            "Jupiter Orbit"
+          ],
+          "id" : "00EBEBB3-BB01-4863-B8D7-EFEBE4EBD5BF",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "date" : 736975629.202385,
+          "hint" : ".",
+          "topic" : "Outer Space",
+          "correct" : "Blue",
+          "id" : "2FF613DF-3B6F-49B4-9FCF-961A6754CFC3",
+          "answers" : [
+            "Red",
+            "Yellow",
+            "Blue",
+            "White"
+          ],
+          "explanation" : "",
+          "question" : "What color are the hottest stars?",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "correct" : "Hubble Space Telescope",
+          "topic" : "Outer Space",
+          "hint" : ".",
+          "explanation" : "",
+          "date" : 736975692.077452,
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "What is the name of NASA's most famous space telescope?",
+          "id" : "2FC5ABB6-4542-4DDD-BF76-D020343A9023",
+          "answers" : [
+            "Voyager",
+            "Hubble Space Telescope",
+            "James Webb Space Telescope",
+            "Chandra X-ray Observatory"
+          ]
+        },
+        {
+          "topic" : "Outer Space",
+          "question" : "What are Saturn's rings made of?",
+          "explanation" : "",
+          "hint" : ".",
+          "correct" : "Ice and Rock",
+          "id" : "3E3E19FD-727C-4517-BA08-3F5F9B1E52B4",
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 737083878.591992,
+          "answers" : [
+            "Ice and Rock",
+            "Gas",
+            "Ozone",
+            "Metal"
+          ]
+        },
+        {
+          "explanation" : "Light from Proxima Centauri, the closest star to Earth, takes approximately 4.3 years to reach us.",
+          "answers" : [
+            "4.3 Seconds",
+            "4.3 Hours",
+            "4.3 Days",
+            "4.3 Years"
+          ],
+          "correct" : "4.3 Years",
+          "hint" : "The star is Proxima Centauri.",
+          "question" : "How long does it take light from the nearest star to reach Earth?",
+          "date" : 743969685.314126,
+          "id" : "3BC02254-276A-4DDE-8B8E-ED730C1C2A77",
+          "aisource" : "gpt-4o",
+          "topic" : "Outer Space"
+        },
+        {
+          "topic" : "Outer Space",
+          "question" : "Which gas gives Mars its reddish color?",
+          "date" : 743969685.319854,
+          "explanation" : "Mars appears reddish due to iron oxide, or rust, on its surface.",
+          "correct" : "Iron Oxide",
+          "id" : "1B065360-99FD-4BFF-A9E2-394772F7C004",
+          "aisource" : "gpt-4o",
+          "hint" : "This is a chemical compound commonly known as rust.",
+          "answers" : [
+            "Carbon Dioxide",
+            "Nitrogen",
+            "Oxygen",
+            "Iron Oxide"
+          ]
+        },
+        {
+          "date" : 743969685.320024,
+          "correct" : "John Glenn",
+          "id" : "02D22894-F149-437E-9C08-014F1340028B",
+          "topic" : "Outer Space",
+          "question" : "Who was the first American astronaut to orbit Earth?",
+          "aisource" : "gpt-4o",
+          "hint" : "He flew on Friendship 7 in 1962.",
+          "explanation" : "John Glenn was the first American astronaut to orbit Earth, aboard Friendship 7 in 1962.",
+          "answers" : [
+            "Neil Armstrong",
+            "Alan Shepard",
+            "John Glenn",
+            "Buzz Aldrin"
+          ]
+        },
+        {
+          "answers" : [
+            "Viking 1",
+            "Pioneer 10",
+            "Mars Pathfinder",
+            "Curiosity"
+          ],
+          "topic" : "Outer Space",
+          "explanation" : "The Mars Pathfinder mission, launched by NASA, successfully landed the Sojourner rover on Mars on July 4, 1997.",
+          "aisource" : "gpt-4o",
+          "date" : 743969685.321227,
+          "hint" : "This mission included the Sojourner rover.",
+          "correct" : "Mars Pathfinder",
+          "id" : "3AEAED5B-B02E-4195-8439-3FE73C28AE2D",
+          "question" : "What space mission was the first to land a rover on Mars?"
+        },
+        {
+          "aisource" : "gpt-4o",
+          "correct" : "Perigee",
+          "answers" : [
+            "Apogee",
+            "Perigee",
+            "Perihelion",
+            "Equinox"
+          ],
+          "explanation" : "Perigee is the point in the orbit of the moon or a satellite at which it is closest to the Earth.",
+          "hint" : "Opposite of apogee.",
+          "id" : "3FD1777C-81A1-49A3-953C-203D0D36E3FC",
+          "date" : 743969685.323609,
+          "topic" : "Outer Space",
+          "question" : "What is the term for the phenomenon when the moon is closest to Earth in its orbit?"
+        },
+        {
+          "hint" : "Originates from Greek words meaning 'near the sun'.",
+          "explanation" : "Perihelion is the point in the orbit of an object where it is closest to the Sun.",
+          "question" : "What term describes the closest point in an object's orbit around the Sun?",
+          "date" : 743969685.323781,
+          "id" : "1D4EDBE1-F326-4650-8A91-E951DF5AB827",
+          "topic" : "Outer Space",
+          "correct" : "Perihelion",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Apogee",
+            "Perigee",
+            "Apsis",
+            "Perihelion"
+          ]
+        },
+        {
+          "correct" : "Redshift",
+          "topic" : "Outer Space",
+          "date" : 743969685.32453,
+          "id" : "1E91A573-6FE0-4DAA-84BA-1203251C76F5",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Redshift",
+            "Blueshift",
+            "Doppler Effect",
+            "Tidal Effect"
+          ],
+          "explanation" : "Redshift occurs when light from an object moving away from the observer is stretched, making it appear redder due to the Doppler effect.",
+          "question" : "What is the effect called when an object's light appears redder because it is moving away from the observer?",
+          "hint" : "This effect is named after a color on the visible spectrum."
+        },
+        {
+          "answers" : [
+            "Space Exploration and Tracking Initiative",
+            "Search for Extraterrestrial Intelligence",
+            "Solar Estimation and Timing Institute",
+            "Satellite Emergency Transmission Index"
+          ],
+          "id" : "1A747889-36C0-4913-8870-E1E4CE35B932",
+          "explanation" : "SETI stands for Search for Extraterrestrial Intelligence, which is the collective name for a number of activities undertaken to detect intelligent extraterrestrial life.",
+          "topic" : "Outer Space",
+          "date" : 743969685.325693,
+          "hint" : "Concerned with alien life.",
+          "correct" : "Search for Extraterrestrial Intelligence",
+          "question" : "What does the acronym SETI stand for?",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "hint" : "This layer is just above the troposphere.",
+          "id" : "1C152D84-B229-4F4C-BFA3-DF0EEFB10B1D",
+          "explanation" : "The ozone layer is situated in the stratosphere, which helps to protect the Earth from harmful ultraviolet radiation from the Sun.",
+          "date" : 743969685.327024,
+          "topic" : "Outer Space",
+          "correct" : "Stratosphere",
+          "question" : "What layer of the Earth's atmosphere contains the ozone layer?",
+          "aisource" : "gpt-4o",
+          "answers" : [
+            "Troposphere",
+            "Exosphere",
+            "Mesosphere",
+            "Stratosphere"
+          ]
+        },
+        {
+          "answers" : [
+            "Black Hole",
+            "Supernova",
+            "White Dwarf",
+            "Neutron Star"
+          ],
+          "topic" : "Outer Space",
+          "aisource" : "gpt-4o",
+          "date" : 743969685.327263,
+          "id" : "3FACE461-10D7-4F6C-9526-CBA87C3C1E3D",
+          "explanation" : "When a star explodes as a supernova, it can produce intricate and stunning rings of gas and dust.",
+          "hint" : "This event is the end of a star's life cycle.",
+          "question" : "What celestial object can sometimes form beautiful rings when it explodes?",
+          "correct" : "Supernova"
+        },
+        {
+          "date" : 743969685.329261,
+          "answers" : [
+            "Curiosity",
+            "Voyager 1",
+            "Lunar Rover",
+            "Cassini"
+          ],
+          "explanation" : "Voyager 1 is a spacecraft that visited Jupiter in 1979, sending back valuable data and images of the gas giant.",
+          "topic" : "Outer Space",
+          "correct" : "Voyager 1",
+          "hint" : "Originally launched in 1977 to study the outer planets.",
+          "question" : "Name a spacecraft that has visited Jupiter.",
+          "id" : "2EACDE8B-95B6-4500-9C30-CFC21C51520B",
+          "aisource" : "gpt-4o"
+        },
+        {
+          "answers" : [
+            "Yuri Gagarin",
+            "Neil Armstrong",
+            "Buzz Aldrin",
+            "Alan Shepard"
+          ],
+          "correct" : "Yuri Gagarin",
+          "date" : 743969685.329742,
+          "id" : "3C5C1FBC-FA4B-45EC-8ED3-6E5626268ED8",
+          "question" : "Who was the first human in space?",
+          "hint" : "He was a Soviet cosmonaut.",
+          "explanation" : "Yuri Gagarin was the first human to journey into outer space, completing an orbit of Earth on April 12, 1961.",
+          "topic" : "Outer Space",
+          "aisource" : "gpt-4o"
+        }
+      ],
+      "id" : "11DD1769-424C-4713-A6AE-EDC9B577574B",
+      "pic" : "leaf",
+      "topic" : "Outer Space",
+      "generated" : 748289872.58895
+    },
+    {
+      "generated" : 748289872.588985,
+      "pic" : "leaf",
+      "id" : "EE4B21C4-ACCD-4E94-9205-C13A01CEEC04",
+      "topic" : "Rules of Baseball",
+      "challenges" : [
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 736813194.751942,
+          "answers" : [
+            "Special",
+            "Double",
+            "Base Hit",
+            "Home Run"
+          ],
+          "hint" : ".",
+          "topic" : "Rules of Baseball",
+          "question" : "In MLB, what is the term for when a batter reaches first base after hitting a ball that lands in fair territory without being caught on the fly?",
+          "id" : "90CE54B0-3B88-4349-8496-DA0117182FCC",
+          "correct" : "Base Hit",
+          "explanation" : ""
+        },
+        {
+          "correct" : "Walk",
+          "date" : 736813194.752604,
+          "id" : "72B57510-E8AB-48DE-96E1-49523136A2CC",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Strikeout",
+            "Walk",
+            "Foul Ball",
+            "Home Run"
+          ],
+          "question" : "In MLB, what is the result that happens whenever a pitcher throws four balls to a batter?",
+          "explanation" : "",
+          "topic" : "Rules of Baseball"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "After the 5th inning",
+            "After the 3rd inning",
+            "After the 7th inning",
+            "After the 1st inning"
+          ],
+          "topic" : "Rules of Baseball",
+          "hint" : ".",
+          "question" : "In MLB, if a game is delayed by rain, after what inning can an official call the game complete?",
+          "date" : 736813194.753001,
+          "correct" : "After the 5th inning",
+          "id" : "63DCC0B2-1662-4678-B249-F29114BE5ED9",
+          "explanation" : ""
+        },
+        {
+          "correct" : "Balk",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "17A59EDA-9C89-4513-87DA-B47353172130",
+          "topic" : "Rules of Baseball",
+          "question" : "What is the term used when baserunners advance a base due to a pitcher's illegal action?",
+          "explanation" : "",
+          "date" : 736813194.75459,
+          "answers" : [
+            "Force Homerun",
+            "Steal",
+            "Free Strike",
+            "Balk"
+          ]
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "How many feet away from home plate is the pitcher's mound in MLB?",
+          "answers" : [
+            "60 feet, 6 inches",
+            "50 feet",
+            "75 feet",
+            "55 feet"
+          ],
+          "hint" : ".",
+          "topic" : "Rules of Baseball",
+          "correct" : "60 feet, 6 inches",
+          "id" : "87C36DDE-271E-424E-AA03-3B69B48C58DF",
+          "explanation" : "",
+          "date" : 736813194.754823
+        },
+        {
+          "correct" : "Strike",
+          "hint" : ".",
+          "topic" : "Rules of Baseball",
+          "question" : "In MLB, what is the penalty for a batter stepping out of the batter's box during a pitch?",
+          "date" : 736813194.75504,
+          "explanation" : "",
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "68CA0AFB-48AD-44CE-AEA7-58C5EFA0EEAC",
+          "answers" : [
+            "Strike",
+            "Ball",
+            "Foul",
+            "Out"
+          ]
+        },
+        {
+          "topic" : "Rules of Baseball",
+          "answers" : [
+            "Triple Play",
+            "Home Run",
+            "Double Play",
+            "Force Out"
+          ],
+          "correct" : "Double Play",
+          "hint" : ".",
+          "date" : 736813194.755472,
+          "id" : "50D0AE90-B4B8-4210-B6C9-7FFC267C604A",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "question" : "In MLB, what term describes a defensive play where two outs are made within the same play?"
+        },
+        {
+          "correct" : "No",
+          "hint" : ".",
+          "answers" : [
+            "Sometimes",
+            "No",
+            "Yes",
+            "Only in the Outfield"
+          ],
+          "id" : "84F10360-8424-4AB1-A87E-5F456AF8384B",
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 736813194.756119,
+          "question" : "In MLB, can a fielder use his cap to catch a fly ball?",
+          "topic" : "Rules of Baseball",
+          "explanation" : ""
+        },
+        {
+          "explanation" : "",
+          "correct" : "Hit by Pitch",
+          "hint" : ".",
+          "topic" : "Rules of Baseball",
+          "answers" : [
+            "Strike",
+            "Ball",
+            "Hit by Pitch",
+            "Foul Ball"
+          ],
+          "id" : "8D272E62-51FB-4422-AEAC-A80857D11FA7",
+          "question" : "In MLB, what is it called when a pitched ball bounces and then hits the batter?",
+          "date" : 736813194.756613,
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "answers" : [
+            "3",
+            "2",
+            "1",
+            "Unlimited"
+          ],
+          "date" : 736813194.75922,
+          "explanation" : "",
+          "hint" : ".",
+          "question" : "In MLB, how many times can a manager challenge a play per game?",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Rules of Baseball",
+          "correct" : "2",
+          "id" : "6C4D231A-2E60-43A9-BC4D-5086E6FDA222"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "What does the term 'force out' describe?",
+          "id" : "3B2FC767-F375-457D-8A50-E7A286C2931B",
+          "topic" : "Rules of Baseball",
+          "date" : 736813194.759495,
+          "correct" : "An out that occurs when the runner has to advance to the next base",
+          "explanation" : "",
+          "answers" : [
+            "An unhittable pitch",
+            "A homerun",
+            "An out that occurs when the runner has to advance to the next base",
+            "A strikeout"
+          ],
+          "hint" : "."
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "In MLB, how many mound visits are allowed per game without changing the pitcher?",
+          "answers" : [
+            "5",
+            "Unlimited",
+            "6",
+            "3"
+          ],
+          "hint" : ".",
+          "topic" : "Rules of Baseball",
+          "date" : 736813194.760713,
+          "correct" : "5",
+          "explanation" : "",
+          "id" : "23FCD0AD-C898-4D5A-AEFC-C70C3F1CBD3D"
+        },
+        {
+          "date" : 736813194.761073,
+          "answers" : [
+            "Ball",
+            "He's out",
+            "It's a foul ball",
+            "Single"
+          ],
+          "hint" : ".",
+          "correct" : "He's out",
+          "id" : "1B3CF225-60DD-4B3A-A4A7-90B4263AF679",
+          "explanation" : "",
+          "topic" : "Rules of Baseball",
+          "aisource" : "gpt-4-turbo-preview",
+          "question" : "In MLB, what happens when a batter-runner is hit by his own batted ball in fair territory?"
+        },
+        {
+          "date" : 736813194.761436,
+          "question" : "In MLB, what is it called when a pitcher throws to a base instead of home plate to try and get a baserunner out?",
+          "correct" : "Pickoff",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Rules of Baseball",
+          "hint" : ".",
+          "explanation" : "",
+          "answers" : [
+            "Strikeout",
+            "Pickoff",
+            "Foul Ball",
+            "Balk"
+          ],
+          "id" : "6A518A3A-B807-465B-84CF-81ED9B367674"
+        },
+        {
+          "correct" : "No",
+          "explanation" : "",
+          "topic" : "Rules of Baseball",
+          "answers" : [
+            "Yes",
+            "No",
+            "Only if the leading runner is out",
+            "Only during a home run"
+          ],
+          "question" : "In MLB, can a runner overtake another runner on the base path?",
+          "id" : "197E28BD-FFF9-4A2B-A989-C3A1DEA4A8B5",
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "date" : 736813194.762156
+        },
+        {
+          "topic" : "Rules of Baseball",
+          "hint" : ".",
+          "date" : 736813194.762606,
+          "answers" : [
+            "Any part",
+            "Anyplace 5” or more below the tip",
+            "Anywhere above the handle",
+            "The handle"
+          ],
+          "explanation" : "",
+          "id" : "8C5CD7E8-CE1F-46F4-8369-D16B10DD8E4D",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Any part",
+          "question" : "What part of the bat must the ball hit to be considered a fair ball?"
+        },
+        {
+          "date" : 736813194.763431,
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Rules of Baseball",
+          "answers" : [
+            "5",
+            "2",
+            "3",
+            "4"
+          ],
+          "question" : "In MLB, how many balls result in a walk?",
+          "explanation" : "",
+          "hint" : ".",
+          "id" : "03E357BF-8BB4-4611-8EB7-A611A7C91A53",
+          "correct" : "4"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "84F2F661-77B9-44F1-A98D-46B4C8CF6377",
+          "date" : 736813194.765643,
+          "topic" : "Rules of Baseball",
+          "question" : "In MLB, can instant replay be used to challenge balls and strikes?",
+          "hint" : ".",
+          "explanation" : "",
+          "answers" : [
+            "Yes",
+            "No",
+            "Only in the World Series",
+            "Only if both managers agree"
+          ],
+          "correct" : "No"
+        },
+        {
+          "explanation" : "",
+          "answers" : [
+            "2 out of 5",
+            "4 out of 7",
+            "5 out of 9",
+            "4 out of 6"
+          ],
+          "topic" : "Rules of Baseball",
+          "question" : "In MLB as of January 2024, how many games must a team win to win the World Series?",
+          "hint" : ".",
+          "correct" : "4 out of 7",
+          "date" : 736813194.766113,
+          "id" : "28E6C8AA-4474-4541-B7E2-83D515EB2C5E",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "question" : "In MLB, what is it called when the runner on third base starts running toward home plate as the pitcher delivers the ball, and the batter must bunt the ball to allow the runner to score?",
+          "hint" : ".",
+          "answers" : [
+            "Suicide Squeeze",
+            "Death Bunt",
+            "Sacrifice Bunt",
+            "Forced Bunt"
+          ],
+          "id" : "44E9D4C2-DA6C-4398-8FFB-502F1B0D8BE0",
+          "topic" : "Rules of Baseball",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Suicide Squeeze",
+          "date" : 736813194.76658,
+          "explanation" : ""
+        }
+      ]
+    },
+    {
+      "challenges" : [
+        {
+          "date" : 737504246.902992,
+          "topic" : "Spain",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "question" : "What Spanish city is famed for its running of the bulls?",
+          "correct" : "Pamplona",
+          "answers" : [
+            "Pamplona",
+            "Madrid",
+            "Barcelona",
+            "Seville"
+          ],
+          "hint" : ".",
+          "id" : "25D6CC1E-0283-4D53-ABE4-2D25D72F1E90"
+        },
+        {
+          "topic" : "Spain",
+          "hint" : ".",
+          "correct" : "AVE",
+          "explanation" : "",
+          "id" : "3A114D6B-D95F-4542-83A6-43C92B0495FE",
+          "question" : "What's the name of the high-speed train service connecting major cities in Spain?",
+          "answers" : [
+            "Renfe",
+            "Talgo",
+            "AVE",
+            "Euromed"
+          ],
+          "aisource" : "gpt-4-turbo-preview",
+          "date" : 737504389.656992
+        },
+        {
+          "correct" : "Bilbao",
+          "topic" : "Spain",
+          "question" : "In what Spanish city is the Guggenheim Museum, a masterpiece of modern architecture, located?",
+          "date" : 737504505.86112,
+          "aisource" : "gpt-4-turbo-preview",
+          "hint" : ".",
+          "answers" : [
+            "Madrid",
+            "Bilbao",
+            "Valencia",
+            "Seville"
+          ],
+          "explanation" : "",
+          "id" : "4AA1BA83-A95B-48E7-AF67-822CF7C4173E"
+        },
+        {
+          "explanation" : "",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Spain",
+          "date" : 737504542.649266,
+          "answers" : [
+            "Mazapán",
+            "Churros",
+            "Roscón de Reyes",
+            "Flan"
+          ],
+          "correct" : "Roscón de Reyes",
+          "id" : "4BB5CB88-568F-45D5-9F42-B16FEE9FADFD",
+          "question" : "What Spanish sweet treat is traditionally eaten on January 6 to celebrate Epiphany?"
+        },
+        {
+          "id" : "2B95EC66-7DF8-4482-BB74-92A3F4A8F825",
+          "question" : "What's a \"rebujito\", commonly consumed at fairs in Andalusia?",
+          "correct" : "A cocktail",
+          "explanation" : "",
+          "topic" : "Spain",
+          "date" : 737504627.745885,
+          "hint" : ".",
+          "answers" : [
+            "A dance",
+            "A hat",
+            "A cocktail",
+            "A song"
+          ],
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "explanation" : "",
+          "correct" : "Sherry",
+          "hint" : ".",
+          "topic" : "Spain",
+          "id" : "3C0C4BE1-B0C8-476D-B4CE-8EFFDB8BE066",
+          "question" : "What's the name of the fortified wine from the Andalusia region, often enjoyed as an aperitif?",
+          "aisource" : "gpt-4-turbo-preview",
+          "answers" : [
+            "Sherry",
+            "Port",
+            "Rioja",
+            "Cava"
+          ],
+          "date" : 737504717.324766
+        },
+        {
+          "correct" : "Costa del Sol",
+          "date" : 737504717.324769,
+          "question" : "Which Spanish coastal area is often referred to as \"the Coast of the Sun\"?",
+          "answers" : [
+            "Costa Brava",
+            "Costa del Sol",
+            "Costa Blanca",
+            "Costa Dorada"
+          ],
+          "explanation" : "",
+          "topic" : "Spain",
+          "id" : "4BF28703-4C94-4C29-A2DF-47D335677228",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "id" : "1FC37FD9-BCED-46F2-953B-CC0634FB4751",
+          "date" : 737680000.658165,
+          "hint" : ".",
+          "topic" : "Spain",
+          "question" : "Which Spanish cheese, known for its blue veins and strong flavor, is named after a region in northern Spain?",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Cabrales",
+          "explanation" : "",
+          "answers" : [
+            "Manchego",
+            "Burgos",
+            "Idiazábal",
+            "Cabrales"
+          ]
+        },
+        {
+          "date" : 737680000.662467,
+          "topic" : "Spain",
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "265A0FBF-A615-476E-87F8-DDC1050FC622",
+          "question" : "What Spanish island south of Ibiza is known for its white sandy beaches and turquoise waters?",
+          "hint" : ".",
+          "correct" : "Formentera",
+          "explanation" : "",
+          "answers" : [
+            "Mallorca",
+            "Menorca",
+            "Formentera",
+            "Tenerife"
+          ]
+        },
+        {
+          "question" : "What is the name of Spain’s cold tomato soup.",
+          "id" : "4F5C098C-8EA9-4A19-8250-9BD5B6465E38",
+          "topic" : "Spain",
+          "correct" : "Gazpacho",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "hint" : ".",
+          "date" : 737680000.662993,
+          "answers" : [
+            "Vichyssoise",
+            "Minestrone",
+            "Gazpacho",
+            "Borscht"
+          ]
+        },
+        {
+          "correct" : "Granada",
+          "hint" : ".",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "question" : "Which city's old quarter, famous for Moorish architecture, was once the center of the Nasrid Kingdom?",
+          "answers" : [
+            "Seville",
+            "Barcelona",
+            "Granada",
+            "Cordoba"
+          ],
+          "id" : "1E2084D6-7512-4DEF-8A78-0E914D379875",
+          "date" : 737680000.663607,
+          "topic" : "Spain"
+        },
+        {
+          "correct" : "Ibiza",
+          "hint" : ".",
+          "date" : 737680000.664123,
+          "answers" : [
+            "Ibiza",
+            "Majorca",
+            "Tenerife",
+            "Lanzarote"
+          ],
+          "topic" : "Spain",
+          "explanation" : "",
+          "question" : "Name the Spanish island renowned for its club culture and music scene.",
+          "id" : "6D071DE8-9D7F-4F94-82CE-50CFDE935BA4",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "explanation" : "",
+          "correct" : "Juan Carlos I",
+          "question" : "What's the name of the Spanish king who abdicated in 2014?",
+          "hint" : ".",
+          "topic" : "Spain",
+          "aisource" : "gpt-4-turbo-preview",
+          "id" : "95A57484-3F4E-4299-938B-0516001F90C7",
+          "date" : 737680000.664868,
+          "answers" : [
+            "Felipe VI",
+            "Alfonso XIII",
+            "Juan Carlos I",
+            "Juan Carlos I"
+          ]
+        },
+        {
+          "id" : "43D57640-CBDA-41AF-9B70-296F4CEC2E09",
+          "correct" : "La Tomatina",
+          "question" : "Which Spanish festival involves throwing tomatoes at each other?",
+          "answers" : [
+            "San Fermín",
+            "La Tomatina",
+            "Semana Santa",
+            "Fallas"
+          ],
+          "hint" : ".",
+          "explanation" : "",
+          "date" : 737680000.665254,
+          "topic" : "Spain",
+          "aisource" : "gpt-4-turbo-preview"
+        },
+        {
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Lanzarote",
+          "topic" : "Spain",
+          "date" : 737680000.665724,
+          "id" : "9C728C2D-C4B5-4647-A49F-32D342E11F7B",
+          "answers" : [
+            "Lanzarote",
+            "Tenerife",
+            "Gran Canaria",
+            "Majorca"
+          ],
+          "explanation" : "",
+          "question" : "Which Canary Island is known for its almost lunar landscape and national park?",
+          "hint" : "."
+        },
+        {
+          "hint" : ".",
+          "answers" : [
+            "La Gota de Uva",
+            "La Uva De Año Nuevo",
+            "Las Doce Uvas de la Suerte",
+            "El Año Nuevo"
+          ],
+          "question" : "Following which Spanish custom would you a grape at each of the twelve strokes of midnight?",
+          "topic" : "Spain",
+          "id" : "5AFE6084-41E4-4A99-8C90-F2B791671779",
+          "correct" : "Las Doce Uvas de la Suerte",
+          "date" : 737680000.666314,
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : ""
+        },
+        {
+          "hint" : ".",
+          "id" : "276CF09A-7119-4B87-81CE-170399D9C184",
+          "correct" : "Monaco Grand Prix",
+          "question" : "What annual motorsport event, also associated with Spain, takes place in the streets of a principality?",
+          "aisource" : "gpt-4-turbo-preview",
+          "explanation" : "",
+          "topic" : "Spain",
+          "date" : 737680000.666899,
+          "answers" : [
+            "Monaco Grand Prix",
+            "Spanish Grand Prix",
+            "Italian Grand Prix",
+            "Ibiza Grand Prix"
+          ]
+        },
+        {
+          "correct" : "Siesta",
+          "explanation" : "",
+          "hint" : ".",
+          "id" : "139A3D47-B060-490C-84FD-B7DCF57FD431",
+          "answers" : [
+            "Sobremesa",
+            "Siesta",
+            "Fiesta",
+            "Pamplona"
+          ],
+          "question" : "What's Spain's traditional midday nap called?",
+          "date" : 737680000.669192,
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Spain"
+        },
+        {
+          "question" : "What's the Spanish word for an afternoon or evening social gathering involving snacks and alcoholic drinks?",
+          "answers" : [
+            "Tertulia",
+            "Fiesta",
+            "Sobremesa",
+            "Tapeo"
+          ],
+          "explanation" : "",
+          "correct" : "Tertulia",
+          "hint" : ".",
+          "id" : "43AD1CB0-1E39-4DA5-996E-D8B5F8EAAE11",
+          "date" : 737680000.669804,
+          "aisource" : "gpt-4-turbo-preview",
+          "topic" : "Spain"
+        },
+        {
+          "date" : 737680000.670149,
+          "explanation" : "",
+          "answers" : [
+            "Veleta",
+            "Aneto",
+            "Mulhacén",
+            "Mount Teide"
+          ],
+          "id" : "2FFE80A9-2EB5-4043-AAAA-9F92708668B1",
+          "aisource" : "gpt-4-turbo-preview",
+          "correct" : "Mount Teide",
+          "topic" : "Spain",
+          "hint" : ".",
+          "question" : "What is Spain’s highest mountain peak?"
+        }
+      ],
+      "pic" : "leaf",
+      "generated" : 748289872.589021,
+      "topic" : "Spain",
+      "id" : "5077E26E-19C9-4987-B866-508531DB6260"
+    }
+  ]
+}

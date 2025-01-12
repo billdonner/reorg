@@ -31,6 +31,7 @@ enum GameAlertType: Identifiable {
 }
 
 
+
 // MARK: - MainGameView
 struct MainGameView: View {
     var gs: GameState
@@ -80,10 +81,12 @@ Spacer()
             gs: gs,
             chmgr: gs.chmgr!,
             onSingleTap: { a,b in
-              onSingleTap(a,b)
+              withAnimation {
+                onSingleTap(a,b)
+              }
             }
           )
-//          .frame(width: geometry.size.width, height: geometry.size.width)
+
         
           
           

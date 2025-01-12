@@ -8,7 +8,6 @@ struct BoardSizeScreen: View {
   @State var firstOnAppear = true
   @State private var showSizeChangeAlert = false
   @State var cpv: [[Color]] = []
-  
   @Environment(\.dismiss) var dismiss
   
   init(  gs: Binding<GameState>
@@ -17,23 +16,16 @@ struct BoardSizeScreen: View {
    // self._showSettings = showSettings
     l_boardsize = gs.boardsize.wrappedValue
   }
-  
-  
   var body: some View {
     NavigationView {
       Form {
-        
         Section(header: Text("Board")) {
           VStack(alignment: .center) {
             SizePickerView(chosenSize: $l_boardsize)
-            
-            
             PreviewGridView(gs: gs,  boardsize: $l_boardsize, scheme: $gs.currentscheme)
               .frame(width: 200, height: 200)
           }
         }
-        
-        
         Section(header: Text("About QANDA")) {
           VStack {
             HStack { Spacer()
@@ -76,7 +68,6 @@ struct BoardSizeScreen: View {
       gs.moveindex = Array(repeating: Array(repeating: -1, count: l_boardsize), count: l_boardsize)
       gs.onwinpath = Array(repeating: Array(repeating: false, count: l_boardsize), count: l_boardsize)
       gs.replaced = Array(repeating: Array(repeating: [], count: l_boardsize), count: l_boardsize)
-
     //gs. checkAllTopicConsistency("BoardSizeScreen onDonePressed")
       gs.saveGameState()
   }

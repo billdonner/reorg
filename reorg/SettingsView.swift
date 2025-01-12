@@ -25,19 +25,19 @@ struct SettingsView: View {
       Text("Replacements Left: \(gameState.gimmees)")
         .font(.subheadline)
       
-      Button("Size") {showSizeScreen = true}
+      Button("Size") {withAnimation {showSizeScreen = true}}
         .buttonStyle(.borderedProminent)
       
-      Button("Topics") { showTopicsScreen = true}
+      Button("Topics"){withAnimation { showTopicsScreen = true}}
         .buttonStyle(.borderedProminent)
       //ColorSchemePickerView
-      Button("Colors") { showColorScreen = true}
+      Button("Colors") {withAnimation { showColorScreen = true}}
         .buttonStyle(.borderedProminent)
       
-      Button("Freeport") { gameState.gimmees += 5}
+      Button("Freeport") {withAnimation { gameState.gimmees += 5}}
         .buttonStyle(.borderedProminent)
       
-      Button(action: onNewRound) {
+      Button(action: {withAnimation { onNewRound() }} ){
         Text("Start New Round")
           .font(.title2)
           .bold()
@@ -69,7 +69,9 @@ struct SettingsView: View {
                                               @Binding var  gimmeCount: Int // Gimme count passed as a binding
                                               @Binding var  isTouching: Bool
                                             */
-      TopicSelectorScreen(gs: gameState,chmgr:gameState.chmgr!,gimmeCount: $gameState.gimmees,isTouching: .constant(false))
+      TopicSelectorScreen(gs: gameState,chmgr:gameState.chmgr!,
+                          gimmeCount: $gameState.gimmees,
+                          isTouching: .constant(false))
     }
   }
 }

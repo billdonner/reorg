@@ -348,58 +348,8 @@ struct ReplacementPageView : View {
 #Preview("ReplacementPageView") {
   ReplacementPageView(ch: Challenge.amock  ){ch in }
 }
-// MARK: - CorrectlyAnsweredView
-struct CorrectlyAnsweredView: View {
-  var challenge:Challenge
-    var onBackToGame: () -> Void
-  var body: some View {
-        VStack(spacing: 0) {
-            // Display the Question
-          Text("You answered correctly:").font(.subheadline)
-          Spacer()
-               Text( "\(challenge.question)")
-                .padding()
-                .multilineTextAlignment(.center)
-          Spacer()
-               Text( "\(challenge.correct )")
-                .padding()
-                .multilineTextAlignment(.center)
-            Spacer()
-        }
-        .withTitleBar(title: "Answered Correctly", onDismiss: onBackToGame)
-        .background(Color(.systemBackground))
-    }
-}
-#Preview("Correct") {
-  CorrectlyAnsweredView(challenge: Challenge.amock, onBackToGame: {})
-}
-// MARK: - IncorrectlyAnsweredView
-struct IncorrectlyAnsweredView: View {
-    var challenge: Challenge
-    var onBackToQandA: () -> Void
-    var body: some View {
-      VStack(spacing: 0) {
-          // Display the Question
-        Text("You answered incorrectly:").font(.subheadline)
-        Spacer()
-             Text( "\(challenge.question)")
-              .padding()
-              .multilineTextAlignment(.center)
-        Spacer()
-        Text("The correct answer was:")
-             Text( "\(challenge.correct )")
-              .padding()
-              .multilineTextAlignment(.center)
-          Spacer()
-      }
-        .withTitleBar(title: "Answered Incorrectly", onDismiss: onBackToQandA)
-        .background(Color(.systemBackground))
-    
-    }
-}
-#Preview("InCorrect"){
-  IncorrectlyAnsweredView(challenge:Challenge.amock, onBackToQandA: {})
-}
+
+
 // MARK: - FreePortView
 struct FreePortView: View {
   var gameState: GameState

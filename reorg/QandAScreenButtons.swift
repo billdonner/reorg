@@ -28,7 +28,8 @@ extension QandAScreen {
    }
    var thumbsUpButton: some View {
        Button(action: {
-         showThumbsUp =  ch
+         
+         showThumbsUp =  chmgr.everyChallenge[row*gs.boardsize+col]
        }){
          Image(systemName: "hand.thumbsup")
            .font(buttFont)
@@ -38,7 +39,7 @@ extension QandAScreen {
    }
    var thumbsDownButton: some View {
        Button(action: {
-         showThumbsDown = ch
+         showThumbsDown =  chmgr.everyChallenge[row*gs.boardsize+col]
        }){
          Image(systemName: "hand.thumbsdown")
            .font(buttFont)
@@ -50,7 +51,7 @@ extension QandAScreen {
 
    var gimmeeButton: some View {
      Button(action: {
-       showReplacementPage = ch 
+       showReplacementPage =  chmgr.everyChallenge[row*gs.boardsize+col]
      }) {
        Image(systemName: "arrow.trianglehead.2.clockwise")
          .font(buttFont)

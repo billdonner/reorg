@@ -239,12 +239,14 @@ struct SingleCellView: View {
     let inBounds = row < gs.boardsize && col < gs.boardsize
     let challenge = (chidx < 0) ? Challenge.amock : chmgr.everyChallenge[chidx]
     
+//    let _ = print("In singlecellview at \(row),\(col), chidx \(chidx), status \(status)")
+    
     return ZStack {
       if inBounds {
         bottomLayer(challenge: challenge)
-        if isLastMove {
-          lastMoveIndicator()
-        }
+//        if isLastMove {
+//          lastMoveIndicator()
+//        }
         if showTargetFor(row: row, col: col) {
           targetIndicator(challenge: challenge)
         }

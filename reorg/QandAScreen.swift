@@ -4,10 +4,9 @@ struct QandAScreen: View {
 //
   @Binding var gs: GameState
   let chmgr: ChaMan // try this
-  var ch: Challenge
   let row: Int
   let col: Int
-  @Binding var qarb: QARBOp?
+
    
   var onYouWin: () -> Void
   var onYouLose: () -> Void
@@ -35,8 +34,8 @@ struct QandAScreen: View {
 
   var body: some View {
     GeometryReader { geometry in
-  
-  
+      let ch = chmgr.everyChallenge[row*gs.boardsize+col]
+ //let _ =  print("Now presenting at \(row),\(col), \(ch.question)")
       ZStack {
         VStack {
           QandATopBarView(
@@ -45,11 +44,11 @@ struct QandAScreen: View {
             topic: ch.topic,
             hint: ch.hint,
             handlePass: {
-              qarb = noAnswerGiven(row: row, col: col, elapsed: elapsedTime)
+               noAnswerGiven(row: row, col: col, elapsed: elapsedTime)
               onBack()
             },
             handleGimmee: {
-              qarb = gimmeeRequested(row: row, col: col, elapsed: elapsedTime)
+              gimmeeRequested(row: row, col: col, elapsed: elapsedTime)
               showReplacementPage = Challenge.bmock //chmgr.replaceChallenge(at: ch)
              // onBack()
             },
@@ -93,16 +92,15 @@ struct QandAScreen: View {
 
 #Preview {
   QandAScreen(
-    gs: .constant(GameState.mock), chmgr: ChaMan.mock, ch:(Challenge.amock),
-              
-              row: 0, col: 0,qarb: .constant(nil),onYouWin:  {}, onYouLose: {},  onCorrect:{}, onIncorrect:{},onBack:{})
+    gs: .constant(GameState.mock), chmgr: ChaMan.mock,
+              row: 0, col: 0,onYouWin:  {}, onYouLose: {},  onCorrect:{}, onIncorrect:{},onBack:{})
 
 }
 #Preview {
   QandAScreen( 
     gs: .constant(GameState.mock),
-    chmgr: ChaMan.mock, ch: (Challenge.amock),
-              row: 0, col: 0,qarb: .constant(nil),onYouWin:  {}, onYouLose: {},  onCorrect:{}, onIncorrect:{},onBack:{})
+    chmgr: ChaMan.mock, 
+              row: 0, col: 0,onYouWin:  {}, onYouLose: {},  onCorrect:{}, onIncorrect:{},onBack:{})
 
 }
 

@@ -70,7 +70,7 @@ extension MainGameView /* actions */ {
       */
       
       // in the new way of doing things just jump to the qanda view
-      gs.currentView = .qanda(chmgr.everyChallenge[row * gs.boardsize + col], row, col)
+      gs.currentView = .qanda(row,col)
     }
   }
 
@@ -153,17 +153,19 @@ extension MainGameView /* actions */ {
     activeAlert = nil
   }
 
-  func onYouWin() {
-    withAnimation {
-      endGame(status: .justWon)
-    }
-  }
-
-  func onYouLose() {
-    withAnimation {
-      endGame(status: .justLost)
-    }
-  }
+//  func onYouWin() {
+//    withAnimation {
+//      gs.woncount += 1
+//      endGame(status: .justWon)
+//    }
+//  }
+//
+//  func onYouLose() {
+//    withAnimation {
+//      gs.lostcount += 1
+//      endGame(status: .justLost)
+//    }
+//  }
 
   func onEndGamePressed() {
     withAnimation {

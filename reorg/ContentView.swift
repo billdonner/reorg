@@ -44,10 +44,12 @@ struct ContentView: View {
                             topics:[:],
                             challenges:Challenge.mockChallenges)
   @State  var showAlert = false
-  @State var qarb:QARBOp? = nil
   @State var gimmeeAlert = false
   @State var current_size: Int = starting_size  //defined in mainapp
   @State var current_topics: [String: FreeportColor] = [:]
+  
+  @State var row = 0
+  @State var col = 0
   
   fileprivate func loadAndSetupBoard(chmgr:ChaMan ) {
     chmgr.loadAllData(gs: gs)
@@ -72,47 +74,47 @@ struct ContentView: View {
           chmgr:gs.chmgr!, topics: $current_topics,
           onQandA: { challenge in
             withAnimation {
-              gs.currentView = .qanda(challenge)
+              gs.currentView = .qanda(row,col )
             }
           },
           onSettings: { showAlert = true }
         )
-      case .qanda(let challenge):
+        
+      case .qanda(let row,let col):
         if let chmgr = gs.chmgr {
-          QandAScreen(gs:$gs,chmgr: chmgr, ch: challenge, row:0,col:0,
-                      qarb:$qarb,
-                      onYouWin: { withAnimation { gs.currentView = .youWin } },
-                      onYouLose: { withAnimation { gs.currentView = .youLose } },
-                      onCorrect: { withAnimation { gs.currentView = .correct(challenge) } },
-                      onIncorrect: { withAnimation { gs.currentView = .incorrect(challenge) } },
+          QandAScreen(gs:$gs,chmgr: chmgr, row:row,col:col ,
+                      onYouWin: { withAnimation { gs.currentView = .youWin(row,col) } },
+                      onYouLose: { withAnimation { gs.currentView = .youLose(row,col ) } },
+                      onCorrect: { withAnimation { gs.currentView = .correct(row,col) } },
+                      onIncorrect: { withAnimation { gs.currentView = .incorrect(row,col) } },
                       onBack: { withAnimation { gs.currentView = .game } }
           )
         }
       case .youWin:
         YouWinView(
-          onNewGame: {   endGame(status: .justWon) ; resetGame() },
+          onNewGame: {  gs.woncount+=1 ; endGame(status: .justWon) ; resetGame() },
           onSettings: { withAnimation {  gs.currentView = .settings } }
         )
       case .youLose:
         YouLoseView(
-          onNewGame: { endGame(status: .justLost) ; resetGame() },
+          onNewGame: {  gs.lostcount+=1 ;   endGame(status: .justLost) ; resetGame() },
           onSettings: { withAnimation { gs.currentView = .settings } }
         )
-      case .correct(let challenge):
+      case .correct(let row,let col):
         CorrectlyAnsweredView(
-          challenge: challenge,
-          onBackToGame: { withAnimation { gs.currentView = .game } }
+          gs:gs,row:row,col:col,
+          onBackToQandA: { withAnimation { gs.currentView = .game } }
         )
-      case .incorrect(let challenge):
+      case .incorrect(let row,let col ):
         IncorrectlyAnsweredView(
-          challenge: challenge,
+          gs:gs,row:row,col:col,
           onBackToQandA: { withAnimation { gs.currentView = .game } }
         )
       case .settings:
         if let chmgr = gs.chmgr {
           SettingsView(
             gameState: $gs,chmgr:chmgr,
-            onNewRound: { resetGame() }
+            onNewRound: {  resetGame(); }
             //onIncrementReplacementCount: { gameState.replacementCount += 5 }
           )
         }
@@ -130,13 +132,6 @@ struct ContentView: View {
       }
       message: {
       Text("Entering settings will end the current game.")
-    }
-    .onChange(of:qarb){ old,new  in
-      if let qarb = new {
-        print("--Qarb is now \(qarb.description())")
-      } else {
-        print("--Qarb is nil")
-      }
     }
     .onAppear {
       if gs.veryfirstgame {
@@ -165,7 +160,7 @@ struct ContentView: View {
   private func resetGame() {
     gs.currentView = ViewState.game
     gs.resetReplacementCount() // Reset replacements
-    let ok =  startTheGame(boardsize: current_size)
+    let ok =  startTheGame(boardsize: gs.boardsize)
     if !ok {
       print("Could not start game !!!!!!!!")
     }

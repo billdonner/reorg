@@ -8,16 +8,18 @@ enum StateOfPlay: Int, Codable {
 }
 enum ViewState: Codable {
     case game
-    case qanda(Challenge)
-    case youWin
-    case youLose
-    case correct(Challenge)
-  case incorrect(Challenge)
+    case qanda(Int,Int)
+    case youWin(Int,Int)
+    case youLose(Int,Int)
+    case correct(Int,Int)
+    case incorrect(Int,Int)
     case settings
 
     private enum CodingKeys: String, CodingKey {
         case type
         case value
+      case row
+      case col
     }
 
     private enum CaseType: String, Codable {
@@ -35,23 +37,34 @@ enum ViewState: Codable {
         let type = try container.decode(CaseType.self, forKey: .type)
 
         switch type {
-        case .game:
-            self = .game
+  
         case .qanda:
-            let value = try container.decode(Challenge.self, forKey: .value)
-            self = .qanda(value)
+            let row = try container.decode(Int.self, forKey: .value)
+          let col = try container.decode(Int.self, forKey: .value)
+            self = .qanda(row,col)
         case .youWin:
-            self = .youWin
+          let row = try container.decode(Int.self, forKey: .value)
+        let col = try container.decode(Int.self, forKey: .value)
+          self = .youWin(row,col)
+  
         case .youLose:
-            self = .youLose
+          let row = try container.decode(Int.self, forKey: .value)
+        let col = try container.decode(Int.self, forKey: .value)
+          self = .youLose(row,col)
         case .correct:
-            let value = try container.decode(Challenge.self, forKey: .value)
-            self = .correct(value)
+          let row = try container.decode(Int.self, forKey: .value)
+        let col = try container.decode(Int.self, forKey: .value)
+          self = .correct(row,col)
         case .incorrect:
-            let value = try container.decode(Challenge.self, forKey: .value)
-            self = .incorrect(value)
+          let row = try container.decode(Int.self, forKey: .value)
+        let col = try container.decode(Int.self, forKey: .value)
+          self = .incorrect(row,col)
+        
+        
         case .settings:
             self = .settings
+        case .game:
+            self = .game
         }
     }
 
@@ -59,21 +72,30 @@ enum ViewState: Codable {
         var container = encoder.container(keyedBy: CodingKeys.self)
 
         switch self {
+
+        case .qanda(let row, let col):
+            try container.encode(CaseType.qanda, forKey: .type)
+            try container.encode(row, forKey: .row)
+            try container.encode(col , forKey: .col)
+        case .youWin(let row, let col):
+            try container.encode(CaseType.youWin, forKey: .type)
+          try container.encode(row, forKey: .row)
+          try container.encode(col , forKey: .col)
+        case .youLose(let row, let col):
+            try container.encode(CaseType.youLose, forKey: .type)
+          try container.encode(row, forKey: .row)
+          try container.encode(col , forKey: .col)
+        case .correct(let row, let col):
+            try container.encode(CaseType.correct, forKey: .type)
+          try container.encode(row, forKey: .row)
+          try container.encode(col , forKey: .col)
+        case .incorrect(let row, let col):
+            try container.encode(CaseType.incorrect, forKey: .type)
+          try container.encode(row, forKey: .row)
+          try container.encode(col , forKey: .col)
+          
         case .game:
             try container.encode(CaseType.game, forKey: .type)
-        case .qanda(let value):
-            try container.encode(CaseType.qanda, forKey: .type)
-            try container.encode(value, forKey: .value)
-        case .youWin:
-            try container.encode(CaseType.youWin, forKey: .type)
-        case .youLose:
-            try container.encode(CaseType.youLose, forKey: .type)
-        case .correct(let value):
-            try container.encode(CaseType.correct, forKey: .type)
-            try container.encode(value, forKey: .value)
-        case .incorrect(let value):
-            try container.encode(CaseType.incorrect, forKey: .type)
-            try container.encode(value, forKey: .value)
         case .settings:
             try container.encode(CaseType.settings, forKey: .type)
         }

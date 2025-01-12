@@ -1,10 +1,6 @@
 import SwiftUI
 struct ColorSchemePickerView: View {
     @Binding var gs: GameState
- 
-  
-  @State var boardSize: Int = 8
-  
     var colorPicker: some View {
         Picker("Color Palette", selection: $gs.currentscheme) {
             ForEach(Array(allSchemeNames.enumerated()), id: \.element) { index, name in
@@ -21,7 +17,7 @@ struct ColorSchemePickerView: View {
         NavigationView {
           VStack{
           HStack { Spacer()
-            PreviewGridView(gs: gs,  boardsize: $boardSize, scheme: $gs.currentscheme)
+            PreviewGridView(gs: gs,  boardsize: $gs.boardsize, scheme: $gs.currentscheme)
               .frame(width: 100, height: 100)
             Spacer()
           }

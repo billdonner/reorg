@@ -191,7 +191,12 @@ struct SingleCellView: View {
       case .blocked:
         // Blocked cells also appear as circles
         let diameter = cellSize * 0.9
-       // (colorScheme == .light ? Color.offBlack : Color.offWhite)
+        
+        /**
+         
+         Make blocking cells completely mesh with the background rendering them invisible
+         */
+       // (colorScheme == .light ? Color.offBlack : Color.offWhite) // makes them contrasting
         Color(.systemBackground)
           .frame(width: diameter, height: diameter)
           .clipShape(Circle())

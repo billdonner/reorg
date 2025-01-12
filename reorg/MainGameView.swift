@@ -79,9 +79,12 @@ Spacer()
           MainGridView(
             gs: gs,
             chmgr: gs.chmgr!,
-            onSingleTap: onSingleTap
+            onSingleTap: { a,b in
+              onSingleTap(a,b)
+            }
           )
 //          .frame(width: geometry.size.width, height: geometry.size.width)
+        
           
           
 

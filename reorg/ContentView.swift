@@ -2,40 +2,7 @@ import SwiftUI
 
 
 let plainTopicIndex = true
-// MARK: - ReplacementManager Extension on GameState
-extension GameState {
-  func decrementReplacementCount() -> Bool {
-    guard gimmees  > 0 else { return false }
-    gimmees -= 1
-    return true
-  }
-  
-  func resetReplacementCount() {
-    gimmees = 5
-  }
-}
 
-
-
-// MARK: - LatinGunkView
-struct LatinGunkView: View {
-  var body: some View {
-    ScrollView {
-      VStack(alignment: .leading, spacing: 10) {
-        Text("""
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida tincidunt mi, nec scelerisque elit malesuada sit amet. Fusce et consectetur dolor. Etiam nec fermentum magna, nec accumsan mauris.
-                    """)
-        Text("""
-                    Integer gravida felis id velit efficitur volutpat. Mauris sagittis, urna ut consectetur gravida, eros justo luctus eros, quis dapibus lectus risus quis urna. Proin non quam facilisis, mollis eros non, blandit quam.
-                    """)
-        Text("""
-                    Nullam nec venenatis libero. Phasellus vel elit at magna cursus porttitor. Ut faucibus magna vel justo mollis volutpat. Vivamus fermentum eu urna sed vehicula. Curabitur consequat vestibulum nulla nec tempus.
-                    """)
-      }
-      .padding()
-    }
-  }
-}
 
 
 // MARK: - Main App
@@ -123,12 +90,12 @@ struct ContentView: View {
         }
       case .youWin:
         YouWinView(
-          onNewGame: { resetGame() },
-          onSettings: { withAnimation { gs.currentView = .settings } }
+          onNewGame: {   endGame(status: .justWon) ; resetGame() },
+          onSettings: { withAnimation {  gs.currentView = .settings } }
         )
       case .youLose:
         YouLoseView(
-          onNewGame: { resetGame() },
+          onNewGame: { endGame(status: .justLost) ; resetGame() },
           onSettings: { withAnimation { gs.currentView = .settings } }
         )
       case .correct(let challenge):
@@ -153,10 +120,15 @@ struct ContentView: View {
         let _ = print ("ENDEND");EmptyView()
       }
     }
-    .alert("End Current Game?", isPresented: $showAlert) {
-      Button("Cancel", role: .cancel) { }
-      Button("End Game") { withAnimation { gs.currentView = ViewState.settings } }
-    } message: {
+
+      .alert("End Current Game?", isPresented: $showAlert) {
+        Button("Cancel", role: .cancel) { }
+        Button("End Game") { withAnimation {
+          endGame(status: .justAbandoned)
+          gs.currentView = ViewState.settings  }
+        }
+      }
+      message: {
       Text("Entering settings will end the current game.")
     }
     .onChange(of:qarb){ old,new  in
@@ -172,7 +144,10 @@ struct ContentView: View {
         if gs.gimmees == 0 {gimmeeAlert = true}
         current_topics = gs.topicsinplay
         gs.chmgr?.checkAllTopicConsistency("ContentView onAppear2")
-        startTheGame(boardsize: current_size)
+        let ok = startTheGame(boardsize: current_size)
+        if !ok {
+          print("Cant start game!!!!")
+        }
         
       }
       
@@ -189,8 +164,11 @@ struct ContentView: View {
   
   private func resetGame() {
     gs.currentView = ViewState.game
-    gs.board = Array(repeating: Array(repeating: 0, count: 5), count: 5) // Reset board
     gs.resetReplacementCount() // Reset replacements
+    let ok =  startTheGame(boardsize: current_size)
+    if !ok {
+      print("Could not start game !!!!!!!!")
+    }
   }
   
   func startTheGame(boardsize: Int) -> Bool {

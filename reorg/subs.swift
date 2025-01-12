@@ -567,3 +567,36 @@ func spacing(for width: CGFloat) -> CGFloat {
     let closestMatch = spacingTable.min { abs($0.width - width) < abs($1.width - width) }
     return closestMatch?.spacing ?? 10 // Default spacing
 }
+// MARK: - ReplacementManager Extension on GameState
+extension GameState {
+  func decrementReplacementCount() -> Bool {
+    guard gimmees  > 0 else { return false }
+    gimmees -= 1
+    return true
+  }
+  
+  func resetReplacementCount() {
+    gimmees = 5
+  }
+}
+
+
+// MARK: - LatinGunkView
+struct LatinGunkView: View {
+  var body: some View {
+    ScrollView {
+      VStack(alignment: .leading, spacing: 10) {
+        Text("""
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras gravida tincidunt mi, nec scelerisque elit malesuada sit amet. Fusce et consectetur dolor. Etiam nec fermentum magna, nec accumsan mauris.
+                    """)
+        Text("""
+                    Integer gravida felis id velit efficitur volutpat. Mauris sagittis, urna ut consectetur gravida, eros justo luctus eros, quis dapibus lectus risus quis urna. Proin non quam facilisis, mollis eros non, blandit quam.
+                    """)
+        Text("""
+                    Nullam nec venenatis libero. Phasellus vel elit at magna cursus porttitor. Ut faucibus magna vel justo mollis volutpat. Vivamus fermentum eu urna sed vehicula. Curabitur consequat vestibulum nulla nec tempus.
+                    """)
+      }
+      .padding()
+    }
+  }
+}

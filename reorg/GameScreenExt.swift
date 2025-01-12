@@ -62,10 +62,15 @@ extension MainGameView /* actions */ {
 
     if validTap {
       gs.lastmove = GameMove(row: row, col: col, movenumber: gs.movenumber)
+      /**
       //firstMove = false
       // This kicks off the full-screen cover of the QandAScreen
       chal = IdentifiablePoint(
         row: row, col: col, status: chmgr.stati[row * gs.boardsize + col])
+      */
+      
+      // in the new way of doing things just jump to the qanda view
+      gs.currentView = .qanda(chmgr.everyChallenge[row * gs.boardsize + col], row, col)
     }
   }
 

@@ -90,13 +90,15 @@ struct ContentView: View {
                       onBack: { withAnimation { gs.currentView = .game } }
           )
         }
-      case .youWin:
+      case .youWin(let row,let col):
         YouWinView(
+          ch: gs.chmgr!.everyChallenge[row*gs.boardsize+col],
           onNewGame: {  gs.woncount+=1 ; endGame(status: .justWon) ; resetGame() },
           onSettings: { withAnimation {  gs.currentView = .settings } }
         )
-      case .youLose:
+      case .youLose(let row,let col):
         YouLoseView(
+          ch: gs.chmgr!.everyChallenge[row*gs.boardsize+col],
           onNewGame: {  gs.lostcount+=1 ;   endGame(status: .justLost) ; resetGame() },
           onSettings: { withAnimation { gs.currentView = .settings } }
         )

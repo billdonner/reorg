@@ -81,9 +81,7 @@ Spacer()
             gs: gs,
             chmgr: gs.chmgr!,
             onSingleTap: { a,b in
-              withAnimation {
-                onSingleTap(a,b)
-              }
+              onSingleTap(a,b)
             }
           )
 

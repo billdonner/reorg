@@ -1,3 +1,11 @@
+//
+//  YouLoseView.swift
+//  reorg
+//
+//  Created by bill donner on 1/13/25.
+//
+import SwiftUI
+
 // MARK: - YouLoseView
 struct YouLoseView: View {
   let ch:Challenge
